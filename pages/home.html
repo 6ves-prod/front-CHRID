@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIHD - Accueil</title>
+    
+    <link rel="stylesheet" href="../src/static/css/theme.css">
+    <link rel="stylesheet" href="../src/static/css/common.css">
+    <link rel="stylesheet" href="../src/static/css/home.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar-container"></nav>
+    
+    <!-- Hero Section -->
+    <section id="hero-container"></section>
+    
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../src/static/images/team-collaboration.jpg" alt="Morning routine">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Morning routine to boost your mood</h3>
+                        <p class="blog-author">Elizabeth swan</p>
+                    </div>
+                </article>
+                
+                <article class="blog-card featured">
+                    <div class="blog-image">
+                        <img src="../src/static/images/team-collaboration.jpg" alt="Morning routine">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Morning routine to boost your mood</h3>
+                        <p class="blog-author">Elizabeth swan</p>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../src/static/images/team-collaboration.jpg" alt="Morning routine">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Morning routine to boost your mood</h3>
+                        <p class="blog-author">Elizabeth swan</p>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="pagination-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <div class="pagination-numbers">
+                    <a href="#" class="pagination-number active">1</a>
+                    <a href="#" class="pagination-number">2</a>
+                    <a href="#" class="pagination-number">3</a>
+                    <a href="#" class="pagination-number">4</a>
+                    <a href="#" class="pagination-number">5</a>
+                    <a href="#" class="pagination-number">6</a>
+                    <a href="#" class="pagination-number">7</a>
+                    <span class="pagination-dots">.....</span>
+                    <a href="#" class="pagination-number">21</a>
+                    <a href="#" class="pagination-number">22</a>
+                </div>
+                <a href="#" class="pagination-next">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>
+                        <span class="text-accent">Échangeons</span> sur Vos Projets
+                        et Ambitions de <span class="text-dark">Développement</span>
+                    </h2>
+                    <p>
+                        N'hésitez pas à nous contacter pour discuter de vos besoins et découvrir 
+                        comment notre expertise peut vous accompagner vers le succès.
+                    </p>
+                </div>
+                
+                <div class="cta-image">
+                    <img src="../src/static/images/tech-innovation.jpg" alt="Innovation technologique">
+                </div>
+            </div>
+            
+            <div class="workspace-info">
+                <div class="workspace-header">
+                    <h3>We revolutionize your workspace</h3>
+                    <p>With a decade of insights and expertise, we're decided to reimagine co-working</p>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <a href="mailto:email@example.com">email@example.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <a href="tel:+16556000000">+1 (555) 000-0000</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Office</h4>
+                            <p>123 Sample St, Sydney NSW 2000 AU</p>
+                            <a href="#" class="btn-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="footer-container"></footer>
+    
+    <script src="../src/static/js/common.js"></script>
+    <script src="../src/static/js/home.js"></script>
+    
+    <script>
+        loadComponent('navbar-container', 'navbar.html');
+        loadComponent('hero-container', 'hero.html');
+        loadComponent('footer-container', 'footer.html');
+    </script>
+</body>
+</html>

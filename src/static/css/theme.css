@@ -1,0 +1,137 @@
+/* ==========================================
+   CRIHD THEME - Variables et couleurs
+   ========================================== */
+
+:root {
+  /* Couleurs principales */
+  --primary-color: #c53c3c;      /* Rouge principal */
+  --primary-dark: #a73030;       /* Rouge foncé */
+  --primary-light: #e55d5d;      /* Rouge clair */
+  
+  /* Couleurs secondaires */
+  --secondary-color: #2c3e50;    /* Bleu foncé navigation */
+  --secondary-light: #34495e;    /* Bleu moyen */
+  --accent-color: #e74c3c;       /* Rouge accent */
+  
+  /* Couleurs neutres */
+  --text-primary: #2c3e50;       /* Texte principal */
+  --text-secondary: #6c757d;     /* Texte secondaire */
+  --text-light: #adb5bd;         /* Texte clair */
+  --text-white: #ffffff;         /* Texte blanc */
+  
+  /* Arrière-plans */
+  --bg-primary: #ffffff;         /* Fond principal */
+  --bg-secondary: #f8f9fa;       /* Fond secondaire */
+  --bg-dark: #1a2332;            /* Fond sombre footer */
+  --bg-tech: #0f1419;            /* Fond technologique */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  --gradient-tech: linear-gradient(135deg, #0f1419 0%, #2c3e50 100%);
+  --gradient-overlay: rgba(15, 20, 25, 0.8);
+  
+  /* Typographie */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;       /* 12px */
+  --font-size-sm: 0.875rem;      /* 14px */
+  --font-size-base: 1rem;        /* 16px */
+  --font-size-lg: 1.125rem;      /* 18px */
+  --font-size-xl: 1.25rem;       /* 20px */
+  --font-size-2xl: 1.5rem;       /* 24px */
+  --font-size-3xl: 1.875rem;     /* 30px */
+  --font-size-4xl: 2.25rem;      /* 36px */
+  --font-size-5xl: 3rem;         /* 48px */
+  
+  /* Poids des polices */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Espacement */
+  --spacing-xs: 0.25rem;         /* 4px */
+  --spacing-sm: 0.5rem;          /* 8px */
+  --spacing-md: 1rem;            /* 16px */
+  --spacing-lg: 1.5rem;          /* 24px */
+  --spacing-xl: 2rem;            /* 32px */
+  --spacing-2xl: 2.5rem;         /* 40px */
+  --spacing-3xl: 3rem;           /* 48px */
+  --spacing-4xl: 4rem;           /* 64px */
+  --spacing-5xl: 5rem;           /* 80px */
+  
+  /* Rayons de bordure */
+  --radius-sm: 0.25rem;          /* 4px */
+  --radius-md: 0.5rem;           /* 8px */
+  --radius-lg: 0.75rem;          /* 12px */
+  --radius-xl: 1rem;             /* 16px */
+  --radius-2xl: 1.5rem;          /* 24px */
+  
+  /* Ombres */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* Largeurs maximales */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ==========================================
+   MODE SOMBRE (Optionnel)
+   ========================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+  }
+}
+
+/* ==========================================
+   UTILITAIRES DE COULEURS
+   ========================================== */
+
+.text-primary { color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.text-accent { color: var(--accent-color) !important; }
+.text-dark { color: var(--text-primary) !important; }
+.text-light { color: var(--text-secondary) !important; }
+.text-white { color: var(--text-white) !important; }
+
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-secondary { background-color: var(--secondary-color) !important; }
+.bg-dark { background-color: var(--bg-dark) !important; }
+.bg-light { background-color: var(--bg-secondary) !important; }
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================== */
+
+/* Mobile first approach */
+/* xs: 0px and up */
+/* sm: 640px and up */
+/* md: 768px and up */
+/* lg: 1024px and up */
+/* xl: 1280px and up */
+/* 2xl: 1536px and up */
