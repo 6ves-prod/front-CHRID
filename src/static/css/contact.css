@@ -1,0 +1,625 @@
+/* ==========================================
+   CRIHD CONTACT PAGE - STYLES EXACTES DE L'IMAGE
+   ========================================== */
+
+/* Navigation */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.navbar-brand .logo {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2c3e50;
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-link.active {
+    color: #c53c3c;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.lang-btn {
+    background: #c53c3c;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+.login-link {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.signup-btn {
+    background: #c53c3c;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+/* Breadcrumb */
+.breadcrumb-section {
+    background: #f8f9fa;
+    padding: 12px 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-text {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.breadcrumb-line {
+    width: 60px;
+    height: 2px;
+    background: #2c3e50;
+    margin-left: 16px;
+}
+
+/* Hero Section */
+.contact-hero {
+    padding: 60px 0 40px;
+    background: #ffffff;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.highlight-text {
+    color: #c53c3c;
+}
+
+.hero-description p {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Section Contact Info avec Background Tech - EXACTE */
+.contact-info-section {
+    position: relative;
+    padding: 60px 0;
+    background: #2c3e50;
+    color: white;
+    overflow: hidden;
+}
+
+.tech-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: 
+        linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.03) 25%, transparent 50%, rgba(255,255,255,0.03) 75%, transparent 100%),
+        radial-gradient(circle at 25% 25%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(0, 150, 255, 0.1) 0%, transparent 50%);
+    background-size: 100px 100px, 200px 200px, 200px 200px;
+}
+
+.cloud-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cloud-icon {
+    position: absolute;
+    color: rgba(0, 150, 255, 0.3);
+    font-size: 32px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.cloud-1 {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.cloud-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 3s;
+}
+
+.cloud-3 {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 6s;
+}
+
+.network-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%),
+        linear-gradient(0deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+    background-size: 150px 150px;
+}
+
+.contact-info-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.contact-info-section .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.contact-info-section .section-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 48px;
+    max-width: 600px;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.contact-details h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.contact-details p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+}
+
+.contact-details a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.directions-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #c53c3c !important;
+    font-size: 14px;
+}
+
+/* Section Formulaire - STYLE EXACT DE L'IMAGE */
+.contact-form-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.form-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.form-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.form-container {
+    padding: 0;
+    background: white;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #c53c3c;
+    margin-bottom: 32px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+    padding: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 0;
+    font-size: 16px;
+    color: #2c3e50;
+    background: white;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #c53c3c;
+    box-shadow: none;
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.checkbox-label a {
+    color: #c53c3c;
+    text-decoration: none;
+}
+
+.submit-btn {
+    background: #c53c3c;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+    min-width: 160px;
+}
+
+.submit-btn:hover {
+    background: #a73030;
+}
+
+.submit-btn i {
+    font-size: 14px;
+}
+
+/* Footer - STYLE EXACT */
+.footer {
+    background: #1a2332;
+    color: white;
+    padding: 80px 0 40px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.footer-description {
+    color: #9ca3af;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #c53c3c;
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-link {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact-item strong {
+    color: white;
+}
+
+/* Animations - AMÉLIORÉES */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+        opacity: 0.6;
+    }
+}
+
+/* États des champs - RECTANGULAIRES */
+.form-input.error,
+.form-textarea.error {
+    border-color: #ef4444;
+    border-width: 2px;
+}
+
+.form-input.success,
+.form-textarea.success {
+    border-color: #10b981;
+    border-width: 2px;
+}
+
+.field-error {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.submit-btn.success {
+    background: #10b981;
+}
+
+/* Responsive - AMÉLIORER LA COHÉRENCE */
+@media (max-width: 1024px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .form-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .contact-info-section .section-title {
+        font-size: 24px;
+    }
+    
+    .contact-info-section {
+        padding: 40px 0;
+    }
+    
+    .contact-form-section {
+        padding: 60px 0;
+    }
+    
+    .form-container {
+        padding: 0;
+    }
+    
+    .footer {
+        padding: 60px 0 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-hero {
+        padding: 40px 0 30px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .form-image img {
+        height: 300px;
+    }
+    
+    .form-title {
+        font-size: 24px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
