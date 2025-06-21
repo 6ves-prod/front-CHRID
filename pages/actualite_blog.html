@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités, Analyses et Perspectives</title>
+    <link rel="stylesheet" href="../src/static/css/theme.css">
+    <link rel="stylesheet" href="../src/static/css/projects.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom brand colors for reusability */
+        .brand-red { color: #d93749; }
+        .bg-brand-red { background-color: #d93749; }
+        .border-brand-red { border-color: #d93749; }
+        .brand-dark-blue { color: #212b4d; }
+        .bg-brand-dark-blue { background-color: #212b4d; }
+
+        /* Custom style for select arrows */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.25em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main wrapper for distinctive side borders -->
+<div class="min-h-screen flex flex-col">
+
+    <!-- ============================================ -->
+    <!--                  Header                      -->
+    <!-- ============================================ -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div>
+                    <a href="#" class="text-2xl font-bold text-gray-800">Logo.</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center space-x-8">
+                    <!-- Dropdown 1: Qui sommes-nous ? -->
+                    <li class="relative group">
+                        <a href="#" class="flex items-center text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+                            Qui sommes-nous ?
+                            <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Panel -->
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Missions</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personnes</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Direction</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Politiques</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Dropdown 2: Ce que nous faisons ? -->
+                    <li class="relative group">
+                        <a href="#" class="flex items-center text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+                            Ce que nous faisons ?
+                            <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Panel -->
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Missions</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personnes</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Direction</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Politiques</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Regular Links -->
+                    <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Actualité et blog</a></li>
+                    <li class="relative group">
+                        <a href="#" class="flex items-center text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+                            Travailler avec nous ?
+                            <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Panel -->
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Missions</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personnes</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Direction</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Politiques</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Contacts</a></li>
+                </ul>
+
+                <!-- Right-side Actions -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="flex items-center justify-center w-8 h-8 bg-red-600 text-white text-xs font-bold rounded-md hover:bg-red-700 transition-colors">EN</a>
+                    <a href="#" class="hidden sm:block text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Log In</a>
+                    <a href="#" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-red-700 transition-colors">Sign Up</a>
+
+                    <!-- Mobile menu button -->
+                    <button class="lg:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
+                        <span class="sr-only">Open menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow bg-white">
+        <!-- ============================================ -->
+        <!--              Page Title Section              -->
+        <!-- ============================================ -->
+        <section class="py-16 sm:py-20">
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <!-- Left Column -->
+                    <div class="md:col-span-2">
+                        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Blog</p>
+                        <div class="w-16 h-0.5 bg-brand-red my-3"></div>
+                        <h1 class="text-4xl md:text-5xl font-bold leading-tight font-serif-display">
+                            <span class="brand-red">Actualités, Analyses et</span><br>
+                            <span class="brand-dark-blue">Perspectives sur le Développement</span>
+                        </h1>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="pt-2">
+                        <p class="text-base text-gray-600 leading-relaxed">
+                            Explorez nos réflexions, nos études et nos points de vue sur les enjeux clés du développement en Afrique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--             Filter Section                   -->
+        <!-- ============================================ -->
+        <section class="pb-16 sm:pb-20">
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-sm font-semibold text-gray-500 mb-2">Recherche</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <select class="w-full bg-brand-dark-blue text-white px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-red">
+                        <option>Cote d'Ivoire</option>
+                    </select>
+                    <select class="w-full bg-brand-dark-blue text-white px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-red">
+                        <option>Social</option>
+                    </select>
+                    <select class="w-full bg-brand-dark-blue text-white px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-red">
+                        <option>9 Aug 2025</option>
+                    </select>
+                    <button class="w-full bg-brand-red text-white font-semibold px-4 py-3 rounded-md hover:bg-opacity-90 transition">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--             Blog Grid Section                -->
+        <!-- ============================================ -->
+        <section class="pb-16 sm:pb-24">
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 (Featured Style) -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-brand-dark-blue flex-grow">
+                            <h3 class="font-bold text-white mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-300 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 (Standard Style) -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
+                        <div class="p-6 bg-white flex-grow">
+                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
+                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-16 flex items-center justify-center space-x-3 text-sm text-gray-500">
+                    <a href="#" class="hover:text-gray-800">←</a>
+                    <a href="#" class="font-bold text-gray-800">1</a>
+                    <a href="#" class="hover:text-gray-800">2</a>
+                    <a href="#" class="hover:text-gray-800">3</a>
+                    <a href="#" class="hover:text-gray-800">4</a>
+                    <a href="#" class="hover:text-gray-800">5</a>
+                    <a href="#" class="hover:text-gray-800">6</a>
+                    <a href="#" class="hover:text-gray-800">7</a>
+                    <span>...</span>
+                    <a href="#" class="hover:text-gray-800">21</a>
+                    <a href="#" class="hover:text-gray-800">22</a>
+                    <a href="#" class="hover:text-gray-800">→</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">CRIHD</h2>
+                        <p class="footer-description">
+                            We offer comfortable spaces, cozy cafe, high-speed internet, spacious parking area and many more for your best workspaces and meetings
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3 class="footer-title">Blog et actualités</h3>
+                            <ul class="footer-menu">
+                                <li><a href="#" class="footer-link">Co-working spaces</a></li>
+                                <li><a href="#" class="footer-link">Meeting rooms</a></li>
+                                <li><a href="#" class="footer-link">Event spaces</a></li>
+                                <li><a href="#" class="footer-link">Child playground</a></li>
+                                <li><a href="#" class="footer-link">Cafe & resto</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Company</h3>
+                            <ul class="footer-menu">
+                                <li><a href="#" class="footer-link">About Us</a></li>
+                                <li><a href="#" class="footer-link">Pricing</a></li>
+                                <li><a href="#" class="footer-link">Careers</a></li>
+                                <li><a href="#" class="footer-link">Press</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Support</h3>
+                            <ul class="footer-menu">
+                                <li><a href="#" class="footer-link">FAQs</a></li>
+                                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                                <li><a href="#" class="footer-link">Help</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <div class="contact-info">
+                                <p class="contact-item">
+                                    <strong>E.</strong> Hello@frispes.com
+                                </p>
+                                <p class="contact-item">
+                                    <strong>A.</strong> Jalan Jayakatwang No.301<br>
+                                    Ngasem, Kediri
+                                </p>
+                                <p class="contact-item">
+                                    <strong>P.</strong> (+62) 82334670000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
