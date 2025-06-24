@@ -1,0 +1,551 @@
+/* ==========================================
+   CRIHD DIRECTION PAGE - CSS SPÉCIFIQUE
+   ========================================== */
+
+/* Extensions spécifiques pour la page Direction */
+
+/* Section Message du Directeur - Style premium */
+.director-message-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.director-message-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(197, 60, 60, 0.05) 0%,
+        rgba(44, 62, 80, 0.05) 50%,
+        rgba(197, 60, 60, 0.05) 100%);
+    z-index: 1;
+}
+
+.director-message-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Cartes de vision stratégique */
+.vision-card {
+    position: relative;
+    background: white;
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+
+.vision-card:hover {
+    border-color: #c53c3c;
+    transform: translateY(-16px);
+    box-shadow: 0 25px 50px rgba(197, 60, 60, 0.15);
+}
+
+.vision-card.featured {
+    background: linear-gradient(135deg, #c53c3c 0%, #a73030 100%);
+    color: white;
+    border-color: #a73030;
+}
+
+.vision-card.featured:hover {
+    transform: translateY(-16px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(197, 60, 60, 0.25);
+}
+
+/* Effet de géométrie sur les cartes */
+.vision-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 50%);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.vision-card:hover::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* Section Gouvernance avec timeline */
+.governance-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.governance-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #c53c3c 0%, #2c3e50 100%);
+    border-radius: 2px;
+}
+
+.governance-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 24px;
+    background: white;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.governance-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.governance-item::before {
+    content: '';
+    position: absolute;
+    left: -52px;
+    top: 32px;
+    width: 16px;
+    height: 16px;
+    background: #c53c3c;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #c53c3c;
+}
+
+/* Organigramme de direction */
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 0;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.org-box {
+    background: white;
+    border: 2px solid #e5e7eb;
+    padding: 20px 24px;
+    text-align: center;
+    min-width: 200px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.org-box:hover {
+    border-color: #c53c3c;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.org-box.ceo {
+    background: #c53c3c;
+    color: white;
+    border-color: #a73030;
+}
+
+.org-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.org-box.ceo .org-title {
+    color: white;
+}
+
+.org-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.org-department {
+    font-size: 12px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.org-box.ceo .org-department {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Lignes de connexion organigramme */
+.org-connection {
+    position: absolute;
+    background: #c53c3c;
+    opacity: 0.6;
+}
+
+.org-connection.vertical {
+    width: 2px;
+    height: 32px;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.org-connection.horizontal {
+    height: 2px;
+    top: -16px;
+}
+
+/* Section rapports avec design moderne */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.report-card {
+    background: white;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid #e5e7eb;
+    position: relative;
+}
+
+.report-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: #c53c3c;
+}
+
+.report-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c53c3c 0%, #a73030 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.report-card:hover::before {
+    transform: scaleX(1);
+}
+
+.report-header {
+    padding: 24px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.report-type {
+    font-size: 12px;
+    color: #c53c3c;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.report-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.report-year {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.report-content {
+    padding: 24px;
+}
+
+.report-description {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.report-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 0;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #c53c3c;
+    display: block;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.report-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.report-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0;
+}
+
+.report-btn:hover,
+.report-btn.primary {
+    border-color: #c53c3c;
+    background: #c53c3c;
+    color: white;
+}
+
+/* Indicateurs de performance */
+.performance-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.indicator-card {
+    background: white;
+    padding: 32px 24px;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.indicator-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.indicator-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(197, 60, 60, 0.05) 0%,
+        rgba(197, 60, 60, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.indicator-card:hover::before {
+    opacity: 1;
+}
+
+.indicator-icon {
+    width: 64px;
+    height: 64px;
+    background: #c53c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.indicator-card:hover .indicator-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: #a73030;
+}
+
+.indicator-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #c53c3c;
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.indicator-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Animations spécifiques direction */
+@media (prefers-reduced-motion: no-preference) {
+    .vision-card,
+    .governance-item,
+    .report-card,
+    .indicator-card {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .vision-card:nth-child(1) { animation-delay: 0.1s; }
+    .vision-card:nth-child(2) { animation-delay: 0.2s; }
+    .vision-card:nth-child(3) { animation-delay: 0.3s; }
+
+    .governance-item:nth-child(1) { animation-delay: 0.1s; }
+    .governance-item:nth-child(2) { animation-delay: 0.2s; }
+    .governance-item:nth-child(3) { animation-delay: 0.3s; }
+}
+
+/* Responsive pour direction */
+@media (max-width: 1024px) {
+    .org-chart {
+        gap: 24px;
+    }
+
+    .org-level {
+        gap: 16px;
+    }
+
+    .org-box {
+        min-width: 160px;
+        padding: 16px 20px;
+    }
+
+    .governance-timeline {
+        padding-left: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .governance-timeline {
+        padding-left: 0;
+    }
+
+    .governance-timeline::before {
+        display: none;
+    }
+
+    .governance-item::before {
+        display: none;
+    }
+
+    .governance-item {
+        margin-bottom: 24px;
+    }
+
+    .org-level {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .org-box {
+        min-width: 200px;
+    }
+
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .performance-indicators {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .report-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .performance-indicators {
+        grid-template-columns: 1fr;
+    }
+
+    .indicator-value {
+        font-size: 24px;
+    }
+
+    .indicator-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+}
+
+/* États de focus pour accessibilité */
+.vision-card:focus-within,
+.governance-item:focus-within,
+.report-card:focus-within,
+.indicator-card:focus-within {
+    outline: 3px solid #c53c3c;
+    outline-offset: 2px;
+}
+
+/* Effet de brillance sur les cartes premium */
+.vision-card.featured::after {
+    background: linear-gradient(45deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        transparent 50%);
+}
+
+/* Amélioration de la lisibilité */
+.director-quote {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2c3e50;
+    border-left: 4px solid #c53c3c;
+    padding-left: 24px;
+    margin: 32px 0;
+}
+
+.director-signature {
+    text-align: right;
+    margin-top: 16px;
+    font-weight: 600;
+    color: #c53c3c;
+}

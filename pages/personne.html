@@ -3,13 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRIHD - Projects</title>
+    <title>CRIHD - Notre Équipe</title>
     <link rel="stylesheet" href="../src/static/css/theme.css">
     <link rel="stylesheet" href="../src/static/css/projects.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .team-member-card {
+            transition: all 0.3s ease;
+            border-radius: 0;
+            overflow: hidden;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .member-image {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-member-card:hover .member-image img {
+            transform: scale(1.05);
+        }
+
+        .member-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(44, 62, 80, 0.9));
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member-card:hover .member-overlay {
+            transform: translateY(0);
+        }
+
+        .expertise-tag {
+            background: rgba(197, 60, 60, 0.1);
+            border: 1px solid #c53c3c;
+            color: #c53c3c;
+            padding: 4px 12px;
+            font-size: 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -25,7 +81,7 @@
                 <ul class="hidden lg:flex items-center space-x-8">
                     <!-- Dropdown 1: Qui sommes-nous ? -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+                        <a href="#" class="flex items-center text-sm font-medium text-red-600 hover:text-red-600 transition-colors">
                             Qui sommes-nous ?
                             <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -34,10 +90,10 @@
                         <!-- Dropdown Panel -->
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
                             <div class="py-1">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Missions</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personnes</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Direction</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Politiques</a>
+                                <a href="missions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Missions</a>
+                                <a href="personnes.html" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 font-semibold">Personnes</a>
+                                <a href="direction.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Direction</a>
+                                <a href="politiques.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Politiques</a>
                             </div>
                         </div>
                     </li>
@@ -53,7 +109,7 @@
                         <!-- Dropdown Panel -->
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
                             <div class="py-1">
-                                <a href="../pages/ce_que_nous_faisons.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Services</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Services</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Projets</a>
                             </div>
                         </div>
@@ -71,9 +127,8 @@
                         <!-- Dropdown Panel -->
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
                             <div class="py-1">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Être notre partenaire ?</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pourquoi travailler avec nous ?</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Liste des postes</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pourquoi travailler pour nous ?</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pourquoi travailler avec nous</a>
                             </div>
                         </div>
                     </li>
@@ -98,11 +153,11 @@
         </div>
     </header>
 
-    <!-- Breadcrumb Projects -->
+    <!-- Breadcrumb -->
     <div class="breadcrumb-section">
         <div class="container">
             <div class="breadcrumb">
-                <span class="breadcrumb-text">Projects</span>
+                <span class="breadcrumb-text">Personnes</span>
                 <div class="breadcrumb-line"></div>
             </div>
         </div>
@@ -115,13 +170,13 @@
                 <!-- Colonne de gauche - Titre principal -->
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        Inclusion économique et sociale cas des <span class="highlight-text">handicapées et réfugiées en Côte d'Ivoire</span>
+                        <span class="highlight-text">L'Excellence Humaine</span> au Cœur du Développement Africain
                     </h1>
                 </div>
-                
+
                 <!-- Colonne de droite - Description -->
                 <div class="hero-description">
-                    <p>Etude Baseline & Analyse situationnelle: inclusion économique et sociale des personnes handicapées et réfugiées de Côte d'Ivoire.</p>
+                    <p>Découvrez les experts, chercheurs et professionnels qui donnent vie à notre mission de développement durable à travers leurs compétences diversifiées et leur engagement sans faille.</p>
                 </div>
             </div>
         </div>
@@ -133,9 +188,9 @@
             <div class="showcase-container">
                 <!-- Image principale -->
                 <div class="showcase-image">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=400&fit=crop" alt="Bureau moderne avec plantes" class="main-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=400&fit=crop" alt="Équipe CRIHD au travail" class="main-image">
                 </div>
-                
+
                 <!-- Contrôles overlay -->
                 <div class="showcase-controls">
                     <!-- Indicateurs en bas à gauche -->
@@ -144,7 +199,7 @@
                         <span class="indicator"></span>
                         <span class="indicator"></span>
                     </div>
-                    
+
                     <!-- Flèches en bas à droite -->
                     <div class="navigation-arrows">
                         <button class="arrow-btn prev-btn">
@@ -159,14 +214,14 @@
         </div>
     </section>
 
-    <!-- Section Nos Services -->
+    <!-- Section Direction Exécutive -->
     <section class="services-section">
         <div class="container">
             <!-- En-tête avec titre et navigation -->
             <div class="section-header">
                 <div class="header-content">
-                    <h2 class="section-title">Nos Services</h2>
-                    <p class="section-subtitle">Le Crihd, offre une expertise internationale personnalisée pour soutenir les acteurs locaux engagés dans le développement durable</p>
+                    <h2 class="section-title">Direction Exécutive</h2>
+                    <p class="section-subtitle">Une leadership visionnaire guidée par l'expertise et l'engagement pour un développement africain autonome et durable</p>
                 </div>
                 <div class="header-nav">
                     <button class="nav-btn nav-prev">
@@ -178,89 +233,111 @@
                 </div>
             </div>
 
-            <!-- Grille des services -->
+            <!-- Grille des dirigeants -->
             <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-image"></div>
-                    <div class="service-content">
-                        <button class="service-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <h3 class="service-title">Évaluation des projets/programmes</h3>
-                    </div>
-                </div>
-
-                <!-- Service 2 - Featured (rouge) -->
+                <!-- Directeur Général -->
                 <div class="service-card featured">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Transformation numérique">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=250&fit=crop" alt="Dr. Kouassi Aman">
                     </div>
                     <div class="service-content">
                         <button class="service-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </button>
-                        <h3 class="service-title">Transformation numérique et IA</h3>
+                        <h3 class="service-title">Dr. Kouassi Aman<br>Directeur Général</h3>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
+                <!-- Directrice Recherche -->
                 <div class="service-card">
-                    <div class="service-image"></div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop" alt="Dr. Fatou Diallo">
+                    </div>
                     <div class="service-content">
                         <button class="service-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </button>
-                        <h3 class="service-title">Renforcement de capacités</h3>
+                        <h3 class="service-title">Dr. Fatou Diallo<br>Directrice de Recherche</h3>
+                    </div>
+                </div>
+
+                <!-- Directeur Partenariats -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=250&fit=crop" alt="M. Jean-Baptiste Ouédraogo">
+                    </div>
+                    <div class="service-content">
+                        <button class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <h3 class="service-title">M. Jean-Baptiste Ouédraogo<br>Directeur Partenariats</h3>
                     </div>
                 </div>
             </div>
 
             <!-- Pagination -->
             <div class="services-pagination">
-                <span class="page-counter">01/05</span>
+                <span class="page-counter">01/03</span>
             </div>
         </div>
     </section>
 
-    <!-- Section Développement par la Recherche -->
+    <!-- Section Équipe de Recherche -->
     <section class="research-section">
         <div class="container">
             <div class="research-layout">
                 <!-- Colonne de gauche - Contenu principal -->
                 <div class="research-content">
                     <div class="research-box">
-                        <h2 class="research-title">Le Développement par la Recherche</h2>
+                        <h2 class="research-title">Équipe de Recherche</h2>
                         <p class="research-text">
-                            Notre mission: Renforcer les capacités humaines par une recherche de pointe pour éclairer les décisions et assurer l'efficacité des politiques et programmes de développement en Afrique.
+                            Des chercheurs seniors et juniors unis par la passion de produire des connaissances actionables pour le développement, combinant expertise académique et expérience terrain.
                         </p>
                         <button class="research-btn">
                             <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
-                
-                <!-- Colonne de droite - Partenaires -->
+
+                <!-- Colonne de droite - Membres équipe -->
                 <div class="partners-section">
-                    <h3 class="partners-title">Partenaires</h3>
+                    <h3 class="partners-title">Nos Chercheurs</h3>
                     <div class="partners-grid">
                         <div class="partner-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/UN_logo.svg/200px-UN_logo.svg.png" alt="Nations Unies">
-                        </div>
-                        <div class="partner-logo afd-logo">
-                            <img src="https://www.afd.fr/sites/afd/files/styles/ratio_16_9_large/public/2019-06/logo-afd-2019.png" alt="AFD">
-                        </div>
-                        <div class="partner-logo afd-logo">
-                            <img src="https://www.afd.fr/sites/afd/files/styles/ratio_16_9_large/public/2019-06/logo-afd-2019.png" alt="AFD">
-                        </div>
-                        <div class="partner-logo agence-jeunes">
-                            <span>AGENCE<br>Jeunes</span>
-                        </div>
-                        <div class="partner-logo agence-jeunes">
-                            <span>AGENCE<br>Jeunes</span>
+                            <div style="text-align: center; color: #2c3e50;">
+                                <strong>Dr. Amadou Traoré</strong><br>
+                                <small>Économiste Senior</small>
+                            </div>
                         </div>
                         <div class="partner-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/UN_logo.svg/200px-UN_logo.svg.png" alt="Nations Unies">
+                            <div style="text-align: center; color: #2c3e50;">
+                                <strong>Dr. Aïcha Sanogo</strong><br>
+                                <small>Spécialiste Santé</small>
+                            </div>
+                        </div>
+                        <div class="partner-logo">
+                            <div style="text-align: center; color: #2c3e50;">
+                                <strong>M. Youssouf Koné</strong><br>
+                                <small>Innovation TIC</small>
+                            </div>
+                        </div>
+                        <div class="partner-logo">
+                            <div style="text-align: center; color: #2c3e50;">
+                                <strong>Mme. Mariam Ouattara</strong><br>
+                                <small>Développement Rural</small>
+                            </div>
+                        </div>
+                        <div class="partner-logo">
+                            <div style="text-align: center; color: #2c3e50;">
+                                <strong>Dr. Ibrahim Cissé</strong><br>
+                                <small>Politiques Publiques</small>
+                            </div>
+                        </div>
+                        <div class="partner-logo">
+                            <div style="text-align: center; color: #2c3e50;">
+                                <strong>Mlle. Bineta Sow</strong><br>
+                                <small>Analyste Données</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -268,12 +345,12 @@
         </div>
     </section>
 
-    <!-- Section Projects -->
+    <!-- Section Équipe Support -->
     <section class="projects-section">
         <div class="container">
             <!-- En-tête avec bouton -->
             <div class="projects-header">
-                <h2 class="projects-title">Projects</h2>
+                <h2 class="projects-title">Équipe de Support</h2>
                 <button class="voir-plus-btn">
                     Voir plus <i class="fas fa-arrow-right"></i>
                 </button>
@@ -286,27 +363,27 @@
                     <div class="project-item active">
                         <div class="project-number">01</div>
                         <div class="project-info">
-                            <h4>Analyse linguistique Nord Côte d'Ivoire</h4>
+                            <h4>Mme. Adjowa Mensah - Gestionnaire Administrative</h4>
                         </div>
                     </div>
-                    
+
                     <div class="project-item">
                         <div class="project-number">02</div>
                         <div class="project-info">
-                            <h4>Inclusion sociale et marché du travail - Côte d'Ivoire</h4>
+                            <h4>M. Kwame Asante - Responsable Communication</h4>
                         </div>
                     </div>
-                    
+
                     <div class="project-item">
                         <div class="project-number">03</div>
                         <div class="project-info">
-                            <h4>Renforcement Systèmes de santé - Côte d'Ivoire</h4>
+                            <h4>Mme. Sarah Kone - Coordinatrice Projets</h4>
                         </div>
                     </div>
-                    
+
                     <div class="project-item">
                         <div class="project-info">
-                            <h4>Productivité et Certification vertes - Certification RainForest</h4>
+                            <h4>M. Daniel Atta - Responsable Finance</h4>
                         </div>
                     </div>
                 </div>
@@ -314,10 +391,10 @@
                 <!-- Contenu principal droite -->
                 <div class="project-main">
                     <div class="project-display">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Renforcement systèmes de santé">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop" alt="Équipe administrative">
                         <div class="project-overlay">
-                            <h3>Renforcement systèmes de santé - Côte d'Ivoire</h3>
-                            <p>Accompagnement pour améliorer durablement les infrastructures, les pratiques et l'accès aux soins de santé en Côte d'Ivoire.</p>
+                            <h3>Équipe de Support - Excellence Opérationnelle</h3>
+                            <p>Les professionnels qui assurent le bon fonctionnement opérationnel et administratif de nos activités, garantissant l'efficacité de nos recherches et projets.</p>
                         </div>
                     </div>
                 </div>
@@ -325,17 +402,17 @@
         </div>
     </section>
 
-    <!-- Section Blog -->
+    <!-- Section Valeurs -->
     <section class="blog-section">
         <div class="container">
             <!-- En-tête du blog -->
             <div class="blog-header">
                 <div class="blog-title-section">
-                    <span class="blog-label">Blog</span>
+                    <span class="blog-label">Valeurs</span>
                     <h2 class="blog-main-title">
-                        Le Blog du CRIHD<br>
-                        Actualités &<br>
-                        Analyses
+                        Nos Valeurs<br>
+                        Communes &<br>
+                        Engagements
                     </h2>
                 </div>
                 <div class="blog-actions">
@@ -355,35 +432,35 @@
                 </button>
             </div>
 
-            <!-- Grille des articles -->
+            <!-- Grille des valeurs -->
             <div class="blog-grid">
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop" alt="Recherche et politiques publiques">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=200&fit=crop" alt="Excellence">
                     </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">Recherche et politiques publiques en Afrique</h3>
-                        <p class="blog-excerpt">L'importance des données probantes pour des politiques de développement efficaces.</p>
+                        <h3 class="blog-title">Excellence</h3>
+                        <p class="blog-excerpt">Recherche de la qualité dans chaque projet, analyse et recommandation que nous produisons.</p>
                     </div>
                 </article>
 
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop" alt="Santé en Côte d'Ivoire">
+                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=400&h=200&fit=crop" alt="Collaboration">
                     </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">Santé en Côte d'Ivoire: enjeux et priorités</h3>
-                        <p class="blog-excerpt">Quels sont les stratégies pour améliorer l'accès et la qualité des soins dans le pays.</p>
+                        <h3 class="blog-title">Collaboration</h3>
+                        <p class="blog-excerpt">Travail d'équipe authentique et partage des connaissances pour un impact collectif.</p>
                     </div>
                 </article>
 
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=200&fit=crop" alt="Agriculture durable">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop" alt="Innovation">
                     </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">Agriculture durable & certification en Côte d'Ivoire</h3>
-                        <p class="blog-excerpt">Pratiques durables et enjeux de la certification RainForest.</p>
+                        <h3 class="blog-title">Innovation</h3>
+                        <p class="blog-excerpt">Approches créatives et solutions novatrices pour répondre aux défis contemporains.</p>
                     </div>
                 </article>
             </div>
@@ -412,7 +489,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="footer-links">
                         <div class="footer-column">
                             <h3 class="footer-title">Blog et actualités</h3>
@@ -424,7 +501,7 @@
                                 <li><a href="#" class="footer-link">Cafe & resto</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="footer-column">
                             <h3 class="footer-title">Company</h3>
                             <ul class="footer-menu">
@@ -434,7 +511,7 @@
                                 <li><a href="#" class="footer-link">Press</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="footer-column">
                             <h3 class="footer-title">Support</h3>
                             <ul class="footer-menu">
@@ -443,7 +520,7 @@
                                 <li><a href="#" class="footer-link">Help</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="footer-column">
                             <h3 class="footer-title">Contact Us</h3>
                             <div class="contact-info">
