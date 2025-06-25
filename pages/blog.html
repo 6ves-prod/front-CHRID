@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualités, Analyses et Perspectives</title>
     <link rel="stylesheet" href="../src/static/css/theme.css">
-    <link rel="stylesheet" href="../src/static/css/projects.css">
+    <link rel="stylesheet" href="../src/static/css/home.css">
+    <link rel="stylesheet" href="../src/static/css/common.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,88 +39,67 @@
     <!-- ============================================ -->
     <!--                  Header                      -->
     <!-- ============================================ -->
-    <header class="bg-white border-b border-gray-200">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-20">
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
                 <!-- Logo -->
-                <div>
-                    <a href="#" class="text-2xl font-bold text-gray-800">Logo.</a>
+                <div class="navbar-brand">
+                    <a href="home.html" class="logo">
+                        <span class="logo-text">CRIHD</span>
+                    </a>
                 </div>
 
-                <!-- Desktop Navigation -->
-                <ul class="hidden lg:flex items-center space-x-8">
-                    <!-- Dropdown 1: Qui sommes-nous ? -->
-                    <li class="relative group">
-                        <a href="#" class="flex items-center text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
-                            Qui sommes-nous ?
-                            <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Panel -->
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                            <div class="py-1">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Missions</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personnes</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Direction</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Politiques</a>
-                            </div>
-                        </div>
-                    </li>
+                <!-- Menu principal -->
+                <nav class="navbar-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Qui sommes nous ?</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/mission.html">Mission</a></li>
+                                <li><a href="../pages/equipe.html">Équipe</a></li>
+                                <li><a href="../pages/direction.html">Direction</a></li>
+                                <li><a href="../pages/politique.html">Politiques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Ce que nous faisons ?</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/service.html">Services</a></li>
+                                <li><a href="../pages/projet.html" class="active">Projets</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/blog.html" class="nav-link">Actualité et blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#careers" class="nav-link">Travailler avec nous</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/partenaire.html">Pourquoi être notre partenaire ?</a></li>
+                                <li><a href="../pages/employe.html" class="active">Pourquoi Travailler pour nous ?</a></li>
+                                <li><a href="../pages/poste.html" class="active">Liste des postes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/contact.html" class="nav-link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
 
-                    <!-- Dropdown 2: Ce que nous faisons ? -->
-                    <li class="relative group">
-                        <a href="#" class="flex items-center text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
-                            Ce que nous faisons ?
-                            <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Panel -->
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                            <div class="py-1">
-                                <a href="../pages/ce_que_nous_faisons.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Services</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Projets</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Regular Links -->
-                    <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Actualité et blog</a></li>
-                    <li class="relative group">
-                        <a href="#" class="flex items-center text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
-                            Travailler avec nous ?
-                            <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Panel -->
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                            <div class="py-1">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Être notre partenaire ?</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pourquoi travailler avec nous ?</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Liste des postes</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Contacts</a></li>
-                </ul>
-
-                <!-- Right-side Actions -->
-                <div class="flex items-center space-x-4">
-                    <a href="#" class="flex items-center justify-center w-8 h-8 bg-red-600 text-white text-xs font-bold rounded-md hover:bg-red-700 transition-colors">EN</a>
-                    <a href="#" class="hidden sm:block text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Log In</a>
-                    <a href="#" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-red-700 transition-colors">Sign Up</a>
-
-                    <!-- Mobile menu button -->
-                    <button class="lg:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
-                        <span class="sr-only">Open menu</span>
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
+                <!-- Actions de droite -->
+                <div class="navbar-actions">
+                    <div class="language-switch">
+                        <span class="lang-current">FR</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option">EN</span>
+                    </div>
                 </div>
-            </nav>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -127,23 +107,29 @@
         <!-- ============================================ -->
         <!--              Page Title Section              -->
         <!-- ============================================ -->
-        <section class="py-16 sm:py-20">
-            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-                    <!-- Left Column -->
-                    <div class="md:col-span-2">
-                        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Blog</p>
-                        <div class="w-16 h-0.5 bg-brand-red my-3"></div>
-                        <h1 class="text-4xl md:text-5xl font-bold leading-tight font-serif-display">
-                            <span class="brand-red">Actualités, Analyses et</span><br>
-                            <span class="brand-dark-blue">Perspectives sur le Développement</span>
+        <div class="breadcrumb-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <span class="breadcrumb-text">Blog</span>
+                    <div class="breadcrumb-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Hero -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="hero-layout">
+                    <!-- Colonne de gauche - Titre principal -->
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="highlight-text">Actualités, Analyses et</span><span class="text-dark">Perspectives sur le Développement</span>
                         </h1>
                     </div>
-                    <!-- Right Column -->
-                    <div class="pt-2">
-                        <p class="text-base text-gray-600 leading-relaxed">
-                            Explorez nos réflexions, nos études et nos points de vue sur les enjeux clés du développement en Afrique.
-                        </p>
+
+                    <!-- Colonne de droite - Description -->
+                    <div class="hero-description">
+                        <p>Explorez nos réflexions, nos études et nos points de vue sur les enjeux clés du développement en Afrique.</p>
                     </div>
                 </div>
             </div>

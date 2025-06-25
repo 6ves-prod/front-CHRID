@@ -1,161 +1,9 @@
 /* ==========================================
-   CRIHD PROJECTS - 100% FIDÈLE À L'IMAGE
-   ========================================== */
-
-/* Reset et base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #2c3e50;
-  background: #ffffff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ==========================================
-   NAVIGATION EXACTE
-   ========================================== */
-.header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 0;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-}
-
-.navbar-brand .logo {
-  font-size: 18px;
-  font-weight: 400;
-  color: #2c3e50;
-}
-
-.navbar-nav {
-  display: flex;
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 32px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #2c3e50;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.navbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.lang-btn {
-  background: #c53c3c;
-  color: white;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.login-link {
-  color: #2c3e50;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.signup-btn {
-  background: #c53c3c;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* ==========================================
-   BREADCRUMB PROJECTS
-   ========================================== */
-.breadcrumb-section {
-  background: #f8f9fa;
-  padding: 12px 0;
-}
-
-.breadcrumb {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb-text {
-  font-size: 14px;
-  color: #6b7280;
-  font-weight: 500;
-}
-
-.breadcrumb-line {
-  width: 60px;
-  height: 2px;
-  background: #2c3e50;
-  margin-left: 16px;
-}
-
-/* ==========================================
-   HERO SECTION EXACTE
-   ========================================== */
-.main-hero {
-  padding: 60px 0 40px;
-  background: #ffffff;
-}
-
-.hero-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.hero-title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #2c3e50;
-  margin: 0;
-}
-
-.highlight-text {
-  color: #c53c3c;
-}
-
-.hero-description p {
-  font-size: 16px;
-  color: #6b7280;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* ==========================================
    IMAGE SHOWCASE EXACTE
    ========================================== */
 .image-showcase {
   padding: 0;
+  padding-top: 40px;
   background: #ffffff;
 }
 
@@ -222,139 +70,175 @@ body {
 }
 
 /* ==========================================
-   SERVICES SECTION EXACTE
+   SERVICES SECTION - STYLE EXACT DU DOCUMENT
    ========================================== */
 .services-section {
-  padding: 80px 0;
-  background: #ffffff;
+  padding: 60px 0;
+  background: #f8f9fa;
 }
 
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+}
+
+.header-content {
+  flex: 1;
+  max-width: 500px;
 }
 
 .section-title {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 300;
   color: #2c3e50;
-  margin: 0 0 16px 0;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.5px;
 }
 
 .section-subtitle {
-  max-width: 400px;
-  color: #6b7280;
-  font-size: 16px;
+  font-size: 1rem;
+  color: #7f8c8d;
   line-height: 1.6;
   margin: 0;
 }
 
-.header-nav {
-  display: flex;
-  gap: 8px;
-}
-
-.nav-btn {
-  width: 40px;
-  height: 40px;
-  background: white;
-  border: 1px solid #e5e7eb;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.nav-btn:hover {
-  border-color: #c53c3c;
-  color: #c53c3c;
-}
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 25px;
   margin-bottom: 40px;
 }
 
 .service-card {
   background: white;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
   position: relative;
+  height: 400px;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.service-card.featured {
-  background: #c53c3c;
+.service-card:hover .service-image {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.service-card:hover .service-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #e74c3c;
+  color: white;
+  margin-right: 100px;
+}
+.service-card:hover .service-arrow {
+  position: absolute;
+  bottom: 35%;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #e74c3c;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: none;
+}
+.service-card:hover .service-title {
   color: white;
 }
 
 .service-image {
   width: 100%;
-  height: 200px;
+  height: 70%;
+  position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+
+.service-card:nth-child(1) .service-image {
+  background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop') center/cover;
 }
 
-.service-card:hover .service-image img {
-  transform: scale(1.05);
+.service-card:nth-child(2) .service-image {
+  background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop') center/cover;
+}
+
+.service-card:nth-child(3) .service-image {
+  background: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=400&h=250&fit=crop') center/cover;
 }
 
 .service-content {
-  padding: 24px;
+    height: 30%;
+  padding: 25px 20px;
   position: relative;
+  transition: all 0.3s ease;
+  align-content: center;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.3;
+  text-align: center;
+  padding: 0 20px;
+  transition: color 0.3s ease;
 }
 
 .service-arrow {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  background: #c53c3c;
-  color: white;
+  bottom: 35%;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: #e74c3c;
   border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.service-card.featured .service-arrow {
-  background: white;
-  color: #c53c3c;
-}
-
-.service-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-  padding-right: 50px;
-  line-height: 1.3;
+.service-arrow i {
+  color: white;
+  font-size: 16px;
 }
 
 .services-pagination {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
-.page-counter {
-  color: #6b7280;
-  font-size: 14px;
+.pagination-indicator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination-line {
+  width: 60px;
+  height: 3px;
+  background-color: #e74c3c;
 }
 
 /* ==========================================
@@ -606,32 +490,6 @@ body {
   margin: 0;
 }
 
-.blog-navigation {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.blog-nav-btn {
-  width: 40px;
-  height: 40px;
-  background: white;
-  border: 1px solid #e5e7eb;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.blog-nav-btn:hover {
-  border-color: #c53c3c;
-  color: #c53c3c;
-}
-
 .blog-grid {
   display: flex;
   gap: 24px;
@@ -702,108 +560,6 @@ body {
 }
 
 /* ==========================================
-   FOOTER
-   ========================================== */
-.footer {
-  background: #1a2332;
-  color: white;
-  padding: 80px 0 40px;
-}
-
-.footer-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 80px;
-}
-
-.footer-brand {
-  max-width: 300px;
-}
-
-.footer-logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 16px;
-}
-
-.footer-description {
-  color: #9ca3af;
-  line-height: 1.7;
-  margin-bottom: 32px;
-  font-size: 14px;
-}
-
-.social-links {
-  display: flex;
-  gap: 16px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  background: #c53c3c;
-  transform: translateY(-2px);
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.footer-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.footer-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer-link {
-  color: #9ca3af;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: white;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-item {
-  color: #9ca3af;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.contact-item strong {
-  color: white;
-}
-
-/* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
 @media (max-width: 1024px) {
@@ -835,16 +591,7 @@ body {
   .partners-grid {
     grid-template-columns: 1fr;
   }
-  
-  .footer-main {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -882,12 +629,6 @@ body {
   
   .showcase-controls {
     padding: 0 20px;
-  }
-  
-  .blog-navigation {
-    position: static;
-    justify-content: center;
-    margin-bottom: 20px;
   }
   
   .blog-card {
@@ -939,10 +680,7 @@ body {
   .research-box {
     padding: 24px;
   }
-  
-  .footer {
-    padding: 60px 0 30px;
-  }
+
   
   .blog-card {
     flex: 0 0 250px;
@@ -988,7 +726,6 @@ body {
 .nav-btn:focus,
 .arrow-btn:focus,
 .research-btn:focus,
-.blog-nav-btn:focus,
 .voir-plus-btn:focus {
   outline: 2px solid #c53c3c;
   outline-offset: 2px;
