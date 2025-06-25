@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../src/static/css/theme.css">
     <link rel="stylesheet" href="../src/static/css/home.css">
     <link rel="stylesheet" href="../src/static/css/common.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -67,6 +67,8 @@
                         <span class="lang-divider">|</span>
                         <span class="lang-option">EN</span>
                     </div>
+                    <a href="#login" class="btn-link">Log In</a>
+                    <a href="#signup" class="btn btn-primary">Sign Up</a>
                 </div>
 
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
@@ -98,7 +100,7 @@
                         Inclusion économique et sociale cas des <span class="highlight-text">handicapées et réfugiées en Côte d'Ivoire</span>
                     </h1>
                 </div>
-                
+
                 <!-- Colonne de droite - Description -->
                 <div class="hero-description">
                     <p>Etude Baseline & Analyse situationnelle: inclusion économique et sociale des personnes handicapées et réfugiées de Côte d'Ivoire.</p>
@@ -115,7 +117,7 @@
                 <div class="showcase-image">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=400&fit=crop" alt="Bureau moderne avec plantes" class="main-image">
                 </div>
-                
+
                 <!-- Contrôles overlay -->
                 <div class="showcase-controls">
                     <!-- Indicateurs en bas à gauche -->
@@ -124,7 +126,7 @@
                         <span class="indicator"></span>
                         <span class="indicator"></span>
                     </div>
-                    
+
                     <!-- Flèches en bas à droite -->
                     <div class="navigation-arrows">
                         <button class="arrow-btn prev-btn">
@@ -171,9 +173,11 @@
                     </div>
                 </div>
 
+
                 <!-- Service 2 - Featured (rouge) -->
-                <div class="service-card">
-                    <div class="service-image"></div>
+                <div class="service-card featured">
+                    <div class="service-image">
+                    </div>
                     <div class="service-content">
                         <button class="service-arrow">
                             <i class="fas fa-arrow-right"></i>
@@ -192,6 +196,11 @@
                         <h3 class="service-title">Renforcement de capacités</h3>
                     </div>
                 </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="services-pagination">
+                <span class="page-counter">01/05</span>
             </div>
         </div>
     </section>
@@ -212,28 +221,28 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Colonne de droite - Partenaires -->
                 <div class="partners-section">
                     <h3 class="partners-title">Partenaires</h3>
                     <div class="partners-grid">
                         <div class="partner-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/UN_logo.svg/200px-UN_logo.svg.png" alt="Nations Unies">
-                        </div>
-                        <div class="partner-logo afd-logo">
-                            <img src="https://www.afd.fr/sites/afd/files/styles/ratio_16_9_large/public/2019-06/logo-afd-2019.png" alt="AFD">
-                        </div>
-                        <div class="partner-logo afd-logo">
-                            <img src="https://www.afd.fr/sites/afd/files/styles/ratio_16_9_large/public/2019-06/logo-afd-2019.png" alt="AFD">
-                        </div>
-                        <div class="partner-logo agence-jeunes">
-                            <span>AGENCE<br>Jeunes</span>
-                        </div>
-                        <div class="partner-logo agence-jeunes">
-                            <span>AGENCE<br>Jeunes</span>
+                            <img src="#" alt="logo partenaire">
                         </div>
                         <div class="partner-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/UN_logo.svg/200px-UN_logo.svg.png" alt="Nations Unies">
+                            <img src="#" alt="logo partenaire">
+                        </div>
+                        <div class="partner-logo">
+                            <img src="#" alt="logo partenaire">
+                        </div>
+                        <div class="partner-logo">
+                            <img src="#" alt="logo partenaire">
+                        </div>
+                        <div class="partner-logo">
+                            <img src="#" alt="AFD">
+                        </div>
+                        <div class="partner-logo">
+                            <img src="#" alt="logo partenaire">
                         </div>
                     </div>
                 </div>
@@ -262,21 +271,21 @@
                             <h4>Analyse linguistique Nord Côte d'Ivoire</h4>
                         </div>
                     </div>
-                    
+
                     <div class="project-item">
                         <div class="project-number">02</div>
                         <div class="project-info">
                             <h4>Inclusion sociale et marché du travail - Côte d'Ivoire</h4>
                         </div>
                     </div>
-                    
+
                     <div class="project-item">
                         <div class="project-number">03</div>
                         <div class="project-info">
                             <h4>Renforcement Systèmes de santé - Côte d'Ivoire</h4>
                         </div>
                     </div>
-                    
+
                     <div class="project-item">
                         <div class="project-info">
                             <h4>Productivité et Certification vertes - Certification RainForest</h4>
@@ -302,9 +311,9 @@
     <section class="blog-section">
         <div class="container">
             <!-- En-tête du blog -->
+            <span class="blog-label">Blog</span>
             <div class="blog-header">
                 <div class="blog-title-section">
-                    <span class="blog-label">Blog</span>
                     <h2 class="blog-main-title">
                         Le Blog du CRIHD<br>
                         Actualités &<br>
@@ -318,7 +327,6 @@
                 </div>
             </div>
 
-
             <!-- Grille des articles -->
             <div class="blog-grid">
                 <article class="blog-card">
@@ -328,6 +336,26 @@
                     <div class="blog-content">
                         <h3 class="blog-title">Recherche et politiques publiques en Afrique</h3>
                         <p class="blog-excerpt">L'importance des données probantes pour des politiques de développement efficaces.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop" alt="Santé en Côte d'Ivoire">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Santé en Côte d'Ivoire: enjeux et priorités</h3>
+                        <p class="blog-excerpt">Quels sont les stratégies pour améliorer l'accès et la qualité des soins dans le pays.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop" alt="Santé en Côte d'Ivoire">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Santé en Côte d'Ivoire: enjeux et priorités</h3>
+                        <p class="blog-excerpt">Quels sont les stratégies pour améliorer l'accès et la qualité des soins dans le pays.</p>
                     </div>
                 </article>
 
@@ -376,7 +404,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="footer-links">
                         <div class="footer-column">
                             <h3 class="footer-title">Blog et actualités</h3>
@@ -388,7 +416,7 @@
                                 <li><a href="#" class="footer-link">Cafe & resto</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="footer-column">
                             <h3 class="footer-title">Company</h3>
                             <ul class="footer-menu">
@@ -398,7 +426,7 @@
                                 <li><a href="#" class="footer-link">Press</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="footer-column">
                             <h3 class="footer-title">Support</h3>
                             <ul class="footer-menu">
@@ -407,7 +435,7 @@
                                 <li><a href="#" class="footer-link">Help</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="footer-column">
                             <h3 class="footer-title">Contact Us</h3>
                             <div class="contact-info">
@@ -429,6 +457,6 @@
         </div>
     </footer>
 
-    <script src="../src/static/js/projects.js"></script>
+
 </body>
 </html>

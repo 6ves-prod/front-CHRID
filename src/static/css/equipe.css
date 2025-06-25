@@ -1,331 +1,241 @@
-/* ==========================================
-   CRIHD PERSONNES PAGE - CSS SPÉCIFIQUE
-   ========================================== */
+/* Styles spécifiques équipe inspirés de votre equipe.css existant */
+        .team-member-card {
+            position: relative;
+            transition: all 0.4s ease;
+            border-radius: 0;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-/* Extensions spécifiques pour la page Personnes */
+        .team-member-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
 
-/* Animation des cartes d'équipe */
-.team-member-card {
-    position: relative;
-    transition: all 0.4s ease;
-    border-radius: 0;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        .member-image {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            background: #f8f9fa;
+        }
 
-.team-member-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
 
-/* Images des membres d'équipe */
-.member-image {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    background: #f8f9fa;
-}
+        .team-member-card:hover .member-image img {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+        }
 
-.member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-}
+        .member-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(44, 62, 80, 0.95));
+            color: white;
+            padding: 40px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            opacity: 0;
+        }
 
-.team-member-card:hover .member-image img {
-    transform: scale(1.08);
-    filter: brightness(1.1);
-}
+        .team-member-card:hover .member-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
-/* Overlay d'information sur hover */
-.member-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(44, 62, 80, 0.95));
-    color: white;
-    padding: 40px 20px 20px;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-    opacity: 0;
-}
+        .expertise-tag {
+            background: rgba(197, 60, 60, 0.15);
+            border: 1px solid #c53c3c;
+            color: #c53c3c;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
 
-.team-member-card:hover .member-overlay {
-    transform: translateY(0);
-    opacity: 1;
-}
+        .team-member-card:hover .expertise-tag {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: white;
+            color: white;
+        }
 
-/* Tags d'expertise */
-.expertise-tag {
-    background: rgba(197, 60, 60, 0.15);
-    border: 1px solid #c53c3c;
-    color: #c53c3c;
-    padding: 4px 12px;
-    font-size: 11px;
-    font-weight: 500;
-    border-radius: 20px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
+        .member-content {
+            padding: 24px;
+            text-align: center;
+        }
 
-.team-member-card:hover .expertise-tag {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: white;
-    color: white;
-}
+        .member-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
 
-/* Contenu des cartes */
-.member-content {
-    padding: 24px;
-    text-align: center;
-}
+        .member-role {
+            color: #c53c3c;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-.member-name {
-    font-size: 20px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    transition: color 0.3s ease;
-}
+        .member-description {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
 
-.member-role {
-    color: #c53c3c;
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+        /* Grille des équipes selon votre style */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 40px;
+        }
 
-.member-description {
-    color: #6b7280;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-}
+        /* Filtres selon votre style de boutons */
+        .filter-section {
+            padding: var(--spacing-xl) 0;
+            background: #f8f9fa;
+        }
 
-/* Section Direction Exécutive - Style spécial */
-.leadership-section .service-card.featured {
-    position: relative;
-    overflow: hidden;
-}
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
 
-.leadership-section .service-card.featured::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg,
-        transparent 30%,
-        rgba(197, 60, 60, 0.1) 50%,
-        transparent 70%);
-    transform: rotate(45deg);
-    transition: all 0.6s ease;
-    opacity: 0;
-}
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #e5e7eb;
+            color: #6b7280;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
 
-.leadership-section .service-card.featured:hover::before {
-    opacity: 1;
-    transform: rotate(45deg) translate(20px, 20px);
-}
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #c53c3c;
+            border-color: #c53c3c;
+            color: white;
+        }
 
-/* Grille des valeurs */
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
-}
+        .filter-info {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: var(--spacing-md);
+        }
 
-.value-item {
-    text-align: center;
-    padding: 32px 24px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 0;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
+        /* Section valeurs selon votre style */
+        .team-values-section {
+            background: #2c3e50;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: var(--spacing-5xl) 0;
+        }
 
-.value-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #c53c3c;
-    transform: translateY(-8px);
-}
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
 
-.value-icon {
-    width: 64px;
-    height: 64px;
-    background: #c53c3c;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 24px;
-    transition: all 0.3s ease;
-}
+        .value-item {
+            text-align: center;
+            padding: 32px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
 
-.value-item:hover .value-icon {
-    background: white;
-    color: #c53c3c;
-    transform: scale(1.1);
-}
+        .value-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #c53c3c;
+            transform: translateY(-8px);
+        }
 
-.value-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 16px;
-}
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: #c53c3c;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            color: white;
+        }
 
-.value-description {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-}
+        .value-item:hover .value-icon {
+            background: white;
+            color: #c53c3c;
+            transform: scale(1.1);
+        }
 
-/* Animations spécifiques aux équipes */
-@media (prefers-reduced-motion: no-preference) {
-    .team-member-card {
-        animation: fadeInUp 0.8s ease-out forwards;
-        opacity: 0;
-        transform: translateY(40px);
-    }
+        .value-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
 
-    .team-member-card:nth-child(1) { animation-delay: 0.1s; }
-    .team-member-card:nth-child(2) { animation-delay: 0.2s; }
-    .team-member-card:nth-child(3) { animation-delay: 0.3s; }
-    .team-member-card:nth-child(4) { animation-delay: 0.4s; }
-    .team-member-card:nth-child(5) { animation-delay: 0.5s; }
-    .team-member-card:nth-child(6) { animation-delay: 0.6s; }
-}
+        .value-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
 
-/* États de focus pour accessibilité */
-.team-member-card:focus-within {
-    outline: 3px solid #c53c3c;
-    outline-offset: 4px;
-}
+        /* Responsive selon votre style */
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
 
-.team-member-card:focus-within .member-overlay {
-    transform: translateY(0);
-    opacity: 1;
-}
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
 
-/* Responsive spécifique à la page équipe */
-@media (max-width: 1024px) {
-    .member-image {
-        height: 250px;
-    }
+            .member-image {
+                height: 250px;
+            }
 
-    .values-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 24px;
-    }
-}
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
 
-@media (max-width: 768px) {
-    .member-image {
-        height: 200px;
-    }
-
-    .member-content {
-        padding: 16px;
-    }
-
-    .member-name {
-        font-size: 18px;
-    }
-
-    .value-item {
-        padding: 24px 16px;
-    }
-
-    .value-icon {
-        width: 48px;
-        height: 48px;
-    }
-}
-
-/* Effet de rotation douce pour les icônes */
-.value-icon i {
-    transition: transform 0.3s ease;
-}
-
-.value-item:hover .value-icon i {
-    transform: rotate(5deg);
-}
-
-/* Indicateur de poste leadership */
-.leadership-badge {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: #c53c3c;
-    color: white;
-    padding: 4px 12px;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-radius: 20px;
-    z-index: 2;
-}
-
-/* Effet de brillance sur hover */
-.team-member-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.2) 50%,
-        transparent 100%);
-    transition: left 0.6s ease;
-    z-index: 1;
-}
-
-.team-member-card:hover::after {
-    left: 100%;
-}
-
-/* Section spécifique pour les chercheurs */
-.researchers-grid .service-card {
-    height: auto;
-    min-height: 320px;
-}
-
-.researchers-grid .service-image {
-    height: 200px;
-}
-
-.researchers-grid .service-content {
-    height: auto;
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Amélioration de la lisibilité */
-.team-section-dark {
-    background: #1a2332;
-    color: white;
-}
-
-.team-section-dark .member-name {
-    color: white;
-}
-
-.team-section-dark .member-description {
-    color: rgba(255, 255, 255, 0.7);
-}
+            .filter-btn {
+                min-width: 120px;
+            }
+        }

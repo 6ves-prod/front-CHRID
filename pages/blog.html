@@ -5,31 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualités, Analyses et Perspectives</title>
     <link rel="stylesheet" href="../src/static/css/theme.css">
-    <link rel="stylesheet" href="../src/static/css/home.css">
+    <link rel="stylesheet" href="../src/static/css/blog.css">
     <link rel="stylesheet" href="../src/static/css/common.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom brand colors for reusability */
-        .brand-red { color: #d93749; }
-        .bg-brand-red { background-color: #d93749; }
-        .border-brand-red { border-color: #d93749; }
-        .brand-dark-blue { color: #212b4d; }
-        .bg-brand-dark-blue { background-color: #212b4d; }
 
-        /* Custom style for select arrows */
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>');
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-            background-size: 1.25em;
-        }
-    </style>
 </head>
 <body>
 
@@ -159,100 +142,126 @@
         <!-- ============================================ -->
         <!--             Blog Grid Section                -->
         <!-- ============================================ -->
-        <section class="pb-16 sm:pb-24">
-            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card 1 (Featured Style) -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-brand-dark-blue flex-grow">
-                            <h3 class="font-bold text-white mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-300 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 2 (Standard Style) -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 5 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 6 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 7 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 8 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                    <!-- Card 9 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="https://i.imgur.com/uR1kO3v.png" alt="Team working on laptops" class="w-full h-48 object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-bold brand-red mb-2">Morning routine to boost your mood</h3>
-                            <p class="text-gray-500 text-sm">Elizabeth swan</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="projects-section">
+        <div class="container">
 
-                <!-- Pagination -->
-                <div class="mt-16 flex items-center justify-center space-x-3 text-sm text-gray-500">
-                    <a href="#" class="hover:text-gray-800">←</a>
-                    <a href="#" class="font-bold text-gray-800">1</a>
-                    <a href="#" class="hover:text-gray-800">2</a>
-                    <a href="#" class="hover:text-gray-800">3</a>
-                    <a href="#" class="hover:text-gray-800">4</a>
-                    <a href="#" class="hover:text-gray-800">5</a>
-                    <a href="#" class="hover:text-gray-800">6</a>
-                    <a href="#" class="hover:text-gray-800">7</a>
-                    <span>...</span>
-                    <a href="#" class="hover:text-gray-800">21</a>
-                    <a href="#" class="hover:text-gray-800">22</a>
-                    <a href="#" class="hover:text-gray-800">→</a>
-                </div>
+            <!-- Grille des projets -->
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <article class="project-card" data-category="recherche">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop" alt="Analyse linguistique">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Recherche Linguistique</span>
+                            <span class="project-duration">2023-2025</span>
+                        </div>
+                        <h3 class="project-title">Analyse linguistique Nord Côte d'Ivoire</h3>
+                        <p class="project-description">Étude approfondie des langues locales pour préserver le patrimoine linguistique et améliorer l'accès à l'éducation dans le nord du pays.</p>
+                        <a href="#" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Projet 2 -->
+                <article class="project-card" data-category="inclusion">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop" alt="Inclusion sociale">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Inclusion Sociale</span>
+                            <span class="project-duration">2024-2026</span>
+                        </div>
+                        <h3 class="project-title">Inclusion sociale et marché du travail</h3>
+                        <p class="project-description">Programme d'insertion professionnelle pour les populations vulnérables et amélioration de l'accès à l'emploi décent en Côte d'Ivoire.</p>
+                        <a href="#" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Projet 3 -->
+                <article class="project-card" data-category="sante">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop" alt="Systèmes de santé">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Santé Publique</span>
+                            <span class="project-duration">2023-2024</span>
+                        </div>
+                        <h3 class="project-title">Renforcement des systèmes de santé</h3>
+                        <p class="project-description">Accompagnement pour améliorer durablement les infrastructures, les pratiques et l'accès aux soins de santé en Côte d'Ivoire.</p>
+                        <a href="#" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Projet 4 -->
+                <article class="project-card" data-category="environnement">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop" alt="Agriculture durable">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Développement Durable</span>
+                            <span class="project-duration">2024-2027</span>
+                        </div>
+                        <h3 class="project-title">Certification RainForest et productivité verte</h3>
+                        <p class="project-description">Soutien aux producteurs pour l'adoption de pratiques durables et l'obtention de certifications environnementales.</p>
+                        <a href="#" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Projet 5 -->
+                <article class="project-card" data-category="recherche">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Innovation numérique">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Innovation</span>
+                            <span class="project-duration">2025-2027</span>
+                        </div>
+                        <h3 class="project-title">Transformation numérique pour le développement</h3>
+                        <p class="project-description">Initiative pour intégrer les technologies numériques dans les stratégies de développement local et régional.</p>
+                        <a href="#" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Projet 6 -->
+                <article class="project-card" data-category="inclusion">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=250&fit=crop" alt="Éducation inclusive">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Éducation</span>
+                            <span class="project-duration">2022-2024</span>
+                        </div>
+                        <h3 class="project-title">Éducation inclusive et formation professionnelle</h3>
+                        <p class="project-description">Programme de renforcement des compétences éducatives et professionnelles pour les jeunes en situation de vulnérabilité.</p>
+                        <a href="#" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
-        </section>
+
+            <!-- Pagination -->
+            <div class="projects-pagination">
+                <button class="pagination-btn prev" disabled>
+                    <i class="fas fa-chevron-left"></i> Précédent
+                </button>
+                <div class="pagination-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="pagination-dots">...</span>
+                    <button class="page-number">8</button>
+                </div>
+                <button class="pagination-btn next">
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
     </main>
 
     <!-- ============================================ -->
