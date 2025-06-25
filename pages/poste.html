@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIHD - Postes Disponibles</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../src/static/css/theme.css">
+    <link rel="stylesheet" href="../src/static/css/common.css">
+    <link rel="stylesheet" href="../src/static/css/home.css">
+    <link rel="stylesheet" href="../src/static/css/blog.css">
+    <link rel="stylesheet" href="../src/static/css/poste.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <!-- Logo -->
+                <div class="navbar-brand">
+                    <a href="home.html" class="logo">
+                        <span class="logo-text">CRIHD</span>
+                    </a>
+                </div>
+
+                <!-- Menu principal -->
+                <nav class="navbar-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Qui sommes nous ?</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/mission.html">Mission</a></li>
+                                <li><a href="../pages/equipe.html">Équipe</a></li>
+                                <li><a href="../pages/direction.html">Direction</a></li>
+                                <li><a href="../pages/politique.html">Politiques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Ce que nous faisons ?</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/service.html">Services</a></li>
+                                <li><a href="../pages/projet.html">Projets</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/blog.html" class="nav-link">Actualité et blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Travailler avec nous</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/partenaire.html">Pourquoi être notre partenaire ?</a></li>
+                                <li><a href="../pages/employe.html">Pourquoi Travailler pour nous ?</a></li>
+                                <li><a href="../pages/poste.html" class="active">Liste des postes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/contact.html" class="nav-link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Actions de droite -->
+                <div class="navbar-actions">
+                    <div class="language-switch">
+                        <span class="lang-current">FR</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option">EN</span>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <span class="breadcrumb-text">Postes disponibles</span>
+                <div class="breadcrumb-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-layout">
+                <!-- Colonne de gauche - Titre principal -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight-text">Opportunités</span> de Carrière au Service du Développement Africain
+                    </h1>
+                </div>
+
+                <!-- Colonne de droite - Description -->
+                <div class="hero-description">
+                    <p>Découvrez nos postes ouverts et rejoignez une équipe passionnée qui façonne l'avenir du développement en Afrique de l'Ouest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Filtres de Recherche -->
+    <section class="jobs-filter-section">
+        <div class="container">
+            <div class="filter-header">
+                <h2>Rechercher un poste</h2>
+                <p>Utilisez les filtres ci-dessous pour trouver le poste qui correspond à votre profil</p>
+            </div>
+
+            <div class="jobs-filters">
+                <div class="filter-group">
+                    <label for="department-filter">Département</label>
+                    <select id="department-filter" class="filter-select">
+                        <option value="">Tous les départements</option>
+                        <option value="recherche">Recherche & Analyse</option>
+                        <option value="projets">Gestion de Projets</option>
+                        <option value="communication">Communication</option>
+                        <option value="administration">Administration</option>
+                        <option value="finance">Finance & Comptabilité</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="level-filter">Niveau d'expérience</label>
+                    <select id="level-filter" class="filter-select">
+                        <option value="">Tous les niveaux</option>
+                        <option value="junior">Junior (0-2 ans)</option>
+                        <option value="intermediate">Intermédiaire (3-5 ans)</option>
+                        <option value="senior">Senior (6+ ans)</option>
+                        <option value="expert">Expert (10+ ans)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="contract-filter">Type de contrat</label>
+                    <select id="contract-filter" class="filter-select">
+                        <option value="">Tous les contrats</option>
+                        <option value="cdi">CDI</option>
+                        <option value="cdd">CDD</option>
+                        <option value="stage">Stage</option>
+                        <option value="consultation">Consultation</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="location-filter">Localisation</label>
+                    <select id="location-filter" class="filter-select">
+                        <option value="">Toutes les villes</option>
+                        <option value="abidjan">Abidjan</option>
+                        <option value="ouagadougou">Ouagadougou</option>
+                        <option value="bamako">Bamako</option>
+                        <option value="remote">Télétravail</option>
+                    </select>
+                </div>
+
+                <button class="filter-reset-btn" id="reset-filters">
+                    <i class="fas fa-undo"></i> Réinitialiser
+                </button>
+            </div>
+
+            <div class="results-summary">
+                <span id="results-count">12 postes trouvés</span>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Postes Disponibles -->
+    <section class="jobs-section">
+        <div class="container">
+            <div class="jobs-grid" id="jobs-container">
+
+                <!-- Poste 1 - Chercheur Senior -->
+                <article class="job-card" data-department="recherche" data-level="senior" data-contract="cdi" data-location="abidjan">
+                    <div class="job-header">
+                        <div class="job-meta">
+                            <span class="job-department">Recherche & Analyse</span>
+                            <span class="job-type">CDI</span>
+                        </div>
+                        <div class="job-urgency urgent">
+                            <i class="fas fa-fire"></i> Urgent
+                        </div>
+                    </div>
+
+                    <div class="job-content">
+                        <h3 class="job-title">Chercheur Senior en Économie du Développement</h3>
+                        <div class="job-details">
+                            <div class="job-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Abidjan, Côte d'Ivoire</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-briefcase"></i>
+                                <span>6+ ans d'expérience</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Temps plein</span>
+                            </div>
+                        </div>
+
+                        <p class="job-description">
+                            Nous recherchons un chercheur senior pour diriger nos études sur l'économie du développement en Afrique de l'Ouest. Expertise en analyse quantitative et méthodologies de recherche requise.
+                        </p>
+
+                        <div class="job-skills">
+                            <span class="skill-tag">Économétrie</span>
+                            <span class="skill-tag">SPSS/R</span>
+                            <span class="skill-tag">Méthodologie</span>
+                            <span class="skill-tag">Rédaction</span>
+                        </div>
+
+                        <div class="job-footer">
+                            <div class="job-posted">
+                                Publié il y a 2 jours
+                            </div>
+                            <button class="job-apply-btn" data-job="chercheur-senior">
+                                Postuler <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Poste 2 - Coordinateur Projets -->
+                <article class="job-card featured" data-department="projets" data-level="intermediate" data-contract="cdi" data-location="abidjan">
+                    <div class="job-header">
+                        <div class="job-meta">
+                            <span class="job-department">Gestion de Projets</span>
+                            <span class="job-type">CDI</span>
+                        </div>
+                        <div class="job-urgency featured-badge">
+                            <i class="fas fa-star"></i> Recommandé
+                        </div>
+                    </div>
+
+                    <div class="job-content">
+                        <h3 class="job-title">Coordinateur de Projets de Développement</h3>
+                        <div class="job-details">
+                            <div class="job-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Abidjan + Missions terrain</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-briefcase"></i>
+                                <span>3-5 ans d'expérience</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Temps plein</span>
+                            </div>
+                        </div>
+
+                        <p class="job-description">
+                            Poste clé pour coordonner nos projets de développement sur le terrain. Expérience en gestion de projets internationaux et mobilité en Afrique de l'Ouest indispensable.
+                        </p>
+
+                        <div class="job-skills">
+                            <span class="skill-tag">Gestion de projet</span>
+                            <span class="skill-tag">Terrain</span>
+                            <span class="skill-tag">Anglais</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
+
+                        <div class="job-footer">
+                            <div class="job-posted">
+                                Publié il y a 1 jour
+                            </div>
+                            <button class="job-apply-btn" data-job="coordinateur-projets">
+                                Postuler <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Poste 3 - Analyste Données -->
+                <article class="job-card" data-department="recherche" data-level="junior" data-contract="cdi" data-location="abidjan">
+                    <div class="job-header">
+                        <div class="job-meta">
+                            <span class="job-department">Recherche & Analyse</span>
+                            <span class="job-type">CDI</span>
+                        </div>
+                    </div>
+
+                    <div class="job-content">
+                        <h3 class="job-title">Analyste de Données Junior</h3>
+                        <div class="job-details">
+                            <div class="job-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Abidjan, Côte d'Ivoire</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-briefcase"></i>
+                                <span>1-3 ans d'expérience</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Temps plein</span>
+                            </div>
+                        </div>
+
+                        <p class="job-description">
+                            Rejoignez notre équipe de recherche pour analyser les données de nos projets de développement. Formation en statistiques et maîtrise des outils d'analyse requises.
+                        </p>
+
+                        <div class="job-skills">
+                            <span class="skill-tag">Python/R</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Statistiques</span>
+                            <span class="skill-tag">Visualisation</span>
+                        </div>
+
+                        <div class="job-footer">
+                            <div class="job-posted">
+                                Publié il y a 3 jours
+                            </div>
+                            <button class="job-apply-btn" data-job="analyste-donnees">
+                                Postuler <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Poste 4 - Chargé Communication -->
+                <article class="job-card" data-department="communication" data-level="intermediate" data-contract="cdi" data-location="abidjan">
+                    <div class="job-header">
+                        <div class="job-meta">
+                            <span class="job-department">Communication</span>
+                            <span class="job-type">CDI</span>
+                        </div>
+                    </div>
+
+                    <div class="job-content">
+                        <h3 class="job-title">Chargé de Communication et Marketing Digital</h3>
+                        <div class="job-details">
+                            <div class="job-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Abidjan + Télétravail partiel</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-briefcase"></i>
+                                <span>3-5 ans d'expérience</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Temps plein</span>
+                            </div>
+                        </div>
+
+                        <p class="job-description">
+                            Développez notre stratégie de communication digitale et valorisez l'impact de nos projets. Expérience en communication institutionnelle et réseaux sociaux requise.
+                        </p>
+
+                        <div class="job-skills">
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Réseaux sociaux</span>
+                            <span class="skill-tag">Créativité</span>
+                            <span class="skill-tag">Adobe Suite</span>
+                        </div>
+
+                        <div class="job-footer">
+                            <div class="job-posted">
+                                Publié il y a 5 jours
+                            </div>
+                            <button class="job-apply-btn" data-job="charge-communication">
+                                Postuler <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Poste 5 - Stage Recherche -->
+                <article class="job-card" data-department="recherche" data-level="junior" data-contract="stage" data-location="abidjan">
+                    <div class="job-header">
+                        <div class="job-meta">
+                            <span class="job-department">Recherche & Analyse</span>
+                            <span class="job-type stage-type">Stage</span>
+                        </div>
+                        <div class="job-urgency new">
+                            <i class="fas fa-plus"></i> Nouveau
+                        </div>
+                    </div>
+
+                    <div class="job-content">
+                        <h3 class="job-title">Stage - Assistant de Recherche</h3>
+                        <div class="job-details">
+                            <div class="job-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Abidjan, Côte d'Ivoire</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Étudiant/Diplômé récent</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>6 mois</span>
+                            </div>
+                        </div>
+
+                        <p class="job-description">
+                            Stage de 6 mois pour accompagner nos équipes de recherche. Opportunité unique d'apprentissage dans le domaine du développement en Afrique.
+                        </p>
+
+                        <div class="job-skills">
+                            <span class="skill-tag">Formation recherche</span>
+                            <span class="skill-tag">Curiosité</span>
+                            <span class="skill-tag">Initiative</span>
+                            <span class="skill-tag">Rédaction</span>
+                        </div>
+
+                        <div class="job-footer">
+                            <div class="job-posted">
+                                Publié aujourd'hui
+                            </div>
+                            <button class="job-apply-btn" data-job="stage-recherche">
+                                Postuler <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Poste 6 - Consultant Finance -->
+                <article class="job-card" data-department="finance" data-level="senior" data-contract="consultation" data-location="remote">
+                    <div class="job-header">
+                        <div class="job-meta">
+                            <span class="job-department">Finance & Comptabilité</span>
+                            <span class="job-type">Consultation</span>
+                        </div>
+                    </div>
+
+                    <div class="job-content">
+                        <h3 class="job-title">Consultant Senior en Gestion Financière</h3>
+                        <div class="job-details">
+                            <div class="job-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Télétravail + Missions</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-briefcase"></i>
+                                <span>8+ ans d'expérience</span>
+                            </div>
+                            <div class="job-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Mission 12 mois</span>
+                            </div>
+                        </div>
+
+                        <p class="job-description">
+                            Mission de conseil pour optimiser notre gestion financière et développer de nouveaux outils de suivi budgétaire. Expertise en finance de projets internationaux requise.
+                        </p>
+
+                        <div class="job-skills">
+                            <span class="skill-tag">Finance projets</span>
+                            <span class="skill-tag">Budget</span>
+                            <span class="skill-tag">Audit</span>
+                            <span class="skill-tag">International</span>
+                        </div>
+
+                        <div class="job-footer">
+                            <div class="job-posted">
+                                Publié il y a 1 semaine
+                            </div>
+                            <button class="job-apply-btn" data-job="consultant-finance">
+                                Postuler <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="jobs-pagination">
+                <button class="pagination-btn prev" disabled>
+                    <i class="fas fa-chevron-left"></i> Précédent
+                </button>
+                <div class="pagination-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                </div>
+                <button class="pagination-btn next">
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Candidature Spontanée -->
+    <section class="spontaneous-application-section">
+        <div class="container">
+            <div class="application-content">
+                <div class="application-text">
+                    <h2>Vous ne trouvez pas le poste idéal ?</h2>
+                    <p>Envoyez-nous votre candidature spontanée ! Nous sommes toujours à la recherche de talents passionnés pour enrichir notre équipe.</p>
+                    <div class="application-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Candidature gardée 6 mois</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Notification des nouvelles offres</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Processus prioritaire</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="application-actions">
+                    <button class="btn btn-primary spontaneous-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Candidature spontanée
+                    </button>
+                    <button class="btn btn-secondary alert-btn">
+                        <i class="fas fa-bell"></i>
+                        Alertes emploi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">CRIHD</h2>
+                        <p class="footer-description">
+                            Rejoignez une équipe qui façonne l'avenir du développement en Afrique de l'Ouest. Votre talent au service de l'impact social.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3 class="footer-title">Postes par Département</h3>
+                            <ul class="footer-menu">
+                                <li><a href="#" class="footer-link">Recherche & Analyse (5)</a></li>
+                                <li><a href="#" class="footer-link">Gestion de Projets (3)</a></li>
+                                <li><a href="#" class="footer-link">Communication (2)</a></li>
+                                <li><a href="#" class="footer-link">Administration (1)</a></li>
+                                <li><a href="#" class="footer-link">Finance (1)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Types de Contrats</h3>
+                            <ul class="footer-menu">
+                                <li><a href="#" class="footer-link">CDI (8 postes)</a></li>
+                                <li><a href="#" class="footer-link">CDD (2 postes)</a></li>
+                                <li><a href="#" class="footer-link">Stages (3 postes)</a></li>
+                                <li><a href="#" class="footer-link">Consultations (2 postes)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Candidatures</h3>
+                            <ul class="footer-menu">
+                                <li><a href="#" class="footer-link">Comment postuler</a></li>
+                                <li><a href="#" class="footer-link">Processus de sélection</a></li>
+                                <li><a href="#" class="footer-link">Conseils CV</a></li>
+                                <li><a href="#" class="footer-link">FAQ Recrutement</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Contact RH</h3>
+                            <div class="contact-info">
+                                <p class="contact-item">
+                                    <strong>Recrutement</strong><br>
+                                    recrutement@crihd.org
+                                </p>
+                                <p class="contact-item">
+                                    <strong>Questions</strong><br>
+                                    (+225) 27 21 25 30 40
+                                </p>
+                                <p class="contact-item">
+                                    <strong>Horaires RH</strong><br>
+                                    Lun-Ven : 9h-17h
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../src/static/js/common.js"></script>
+    <script src="../src/static/js/projects.js"></script>
+    <script src="../src/static/js/poste.js"></script>
+</body>
+</html>
