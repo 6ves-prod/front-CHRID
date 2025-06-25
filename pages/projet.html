@@ -8,7 +8,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="../src/static/css/theme.css">
     <link rel="stylesheet" href="../src/static/css/common.css">
-    <link rel="stylesheet" href="../src/static/css/projets.css">
+    <link rel="stylesheet" href="../src/static/css/projet.css">
     <link rel="stylesheet" href="../src/static/css/home.css">
 
     <!-- Fonts -->
@@ -22,7 +22,7 @@
             <div class="navbar">
                 <!-- Logo -->
                 <div class="navbar-brand">
-                    <a href="projects.html" class="logo">
+                    <a href="home.html" class="logo">
                         <span class="logo-text">CRIHD</span>
                     </a>
                 </div>
@@ -33,27 +33,32 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link">Qui sommes nous ?</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#mission">Mission</a></li>
-                                <li><a href="#team">Équipe</a></li>
-                                <li><a href="#direction">Direction</a></li>
-                                <li><a href="#politique">Politiques</a></li>
+                                <li><a href="../pages/mission.html">Mission</a></li>
+                                <li><a href="../pages/equipe.html">Équipe</a></li>
+                                <li><a href="../pages/direction.html">Direction</a></li>
+                                <li><a href="../pages/politique.html">Politiques</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link">Ce que nous faisons ?</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#projets" class="active">Projets</a></li>
+                                <li><a href="../pages/service.html">Services</a></li>
+                                <li><a href="../pages/projet.html" class="active">Projets</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#blog" class="nav-link">Actualité et blog</a>
+                            <a href="../pages/blog.html" class="nav-link">Actualité et blog</a>
                         </li>
                         <li class="nav-item">
                             <a href="#careers" class="nav-link">Travailler avec nous</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/partenaire.html">Pourquoi être notre partenaire ?</a></li>
+                                <li><a href="../pages/employe.html" class="active">Pourquoi Travailler pour nous ?</a></li>
+                                <li><a href="../pages/poste.html" class="active">Liste des postes</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contacts</a>
+                            <a href="../pages/contact.html" class="nav-link">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -65,8 +70,6 @@
                         <span class="lang-divider">|</span>
                         <span class="lang-option">EN</span>
                     </div>
-                    <a href="#login" class="btn-link">Log In</a>
-                    <a href="#signup" class="btn btn-primary">Sign Up</a>
                 </div>
 
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
@@ -89,7 +92,7 @@
     </div>
 
     <!-- Section Hero -->
-    <section class="main-hero">
+    <section class="contact-hero">
         <div class="container">
             <div class="hero-layout">
                 <!-- Colonne de gauche - Titre principal -->
