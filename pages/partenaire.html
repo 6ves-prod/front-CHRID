@@ -14,7 +14,6 @@
 </head>
 <body>
 
-<!-- Main wrapper for distinctive side borders -->
 <div class="min-h-screen flex flex-col">
 
   <!-- ============================================ -->
@@ -56,7 +55,7 @@
                             <a href="#careers" class="nav-link">Travailler avec nous</a>
                             <ul class="dropdown-menu">
                                 <li><a href="../pages/partenaire.html">Pourquoi être notre partenaire ?</a></li>
-                                <li><a href="../pages/carriere.html" class="active">Pourquoi Travailler pour nous ?</a></li>
+                                <li><a href="../pages/employe.html" class="active">Pourquoi Travailler pour nous ?</a></li>
                                 <li><a href="../pages/poste.html" class="active">Liste des postes</a></li>
                             </ul>
                         </li>
@@ -120,20 +119,20 @@
     <!-- ============================================ -->
     <!--          "Vision du Directeur" Section       -->
     <!-- ============================================ -->
-    <section class="director-vision-section">
-      <div class="container">
-        <div class="director-vision-layout">
-          <div class="director-image">
-            <img src="https://i.imgur.com/GzB9o9W.png" alt="Director smiling" class="director-photo">
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="https://i.imgur.com/GzB9o9W.png" alt="Director smiling" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
           </div>
-          <div class="director-content">
-            <h2 class="director-title">
-              La <span class="text-highlight">Vision du Directeur</span> : Un Avenir Africain Éclairé par la <span class="text-highlight">Recherche</span>
+          <div class="md:pl-8">
+            <h2 class="text-3xl font-bold font-serif-display brand-dark-blue">
+              La <span class="brand-red">Vision du Directeur</span> : Un Avenir Africain Éclairé par la <span class="brand-red">Recherche</span>
             </h2>
-            <p class="director-description">
+            <p class="mt-6 text-gray-600 leading-relaxed">
               Découvrez la perspective de notre leadership sur l'importance de l'expertise locale et de la connaissance pour un développement véritablement impactant en Afrique.
             </p>
-            <p class="director-description">
+            <p class="mt-4 text-gray-600 leading-relaxed">
               Il partage sa conviction profonde envers le potentiel humain et économique de l'Afrique et le rôle crucial du CRIHD pour y contribuer.
             </p>
           </div>
@@ -144,91 +143,38 @@
     <!-- ============================================ -->
     <!--             FAQ Accordion Section            -->
     <!-- ============================================ -->
-    <section class="faq-section">
-      <div class="container">
-        <h2 class="faq-main-title">Trouvez les réponses à tout ce dont vous avez besoin</h2>
-        <div class="faq-grid">
+    <section class="py-16 sm:py-24">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center text-3xl font-bold brand-dark-blue mb-12">Trouvez les réponses à tout ce dont vous avez besoin</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- FAQ Card 1 -->
-          <div class="faq-card" data-faq="1">
-            <div class="faq-header">
-              <h3 class="faq-question">Comment réserver un service ?</h3>
-              <button class="faq-toggle" aria-label="Toggle FAQ">
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <p>Pour réserver un service, vous avez plusieurs options à votre disposition :</p>
-                <ul class="faq-answer-list">
-                  <li>Contactez-nous directement par email ou téléphone</li>
-                  <li>Remplissez notre formulaire de demande en ligne</li>
-                  <li>Planifiez un rendez-vous pour discuter de vos besoins</li>
-                  <li>Notre équipe vous guidera dans tout le processus</li>
-                </ul>
-                <div class="faq-contact-info">
-                  📞 Délai de réponse : 24-48h maximum
-                </div>
-              </div>
-            </div>
+          <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between items-center text-center">
+            <h3 class="text-xl font-semibold brand-dark-blue mb-8">Comment réserver un service ?</h3>
+            <button class="w-12 h-12 flex items-center justify-center bg-brand-red text-white rounded-md hover:bg-opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
           </div>
-
           <!-- FAQ Card 2 (Featured) -->
-          <div class="faq-card faq-featured" data-faq="2">
-            <div class="faq-header">
-              <h3 class="faq-question">Travaillez-vous avec des entreprises du privé ?</h3>
-              <button class="faq-toggle" aria-label="Toggle FAQ">
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <p>Absolument ! Nous collaborons étroitement avec le secteur privé dans plusieurs domaines :</p>
-                <ul class="faq-answer-list">
-                  <li>Évaluation d'impact social et environnemental</li>
-                  <li>Conseil en stratégies de développement durable</li>
-                  <li>Formation et renforcement des capacités</li>
-                  <li>Recherche appliquée et études sectorielles</li>
-                  <li>Accompagnement dans les projets RSE</li>
-                </ul>
-                <div class="faq-contact-info">
-                  ✨ Plus de 50 entreprises nous font déjà confiance
-                </div>
-              </div>
-            </div>
+          <div class="bg-brand-red text-white rounded-lg shadow-lg p-8 flex flex-col justify-between items-center text-center">
+            <h3 class="text-xl font-semibold mb-8">Travaillez-vous avec des entreprises du privé ?</h3>
+            <button class="w-12 h-12 flex items-center justify-center bg-white text-brand-red rounded-md hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
           </div>
-
           <!-- FAQ Card 3 -->
-          <div class="faq-card" data-faq="3">
-            <div class="faq-header">
-              <h3 class="faq-question">Quel est votre domaine d'activité</h3>
-              <button class="faq-toggle" aria-label="Toggle FAQ">
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <p>Le CRIHD est spécialisé dans la recherche appliquée pour le développement humain en Afrique :</p>
-                <ul class="faq-answer-list">
-                  <li>Évaluation de programmes et politiques publiques</li>
-                  <li>Recherche en développement socio-économique</li>
-                  <li>Innovation sociale et technologique</li>
-                  <li>Renforcement des capacités institutionnelles</li>
-                  <li>Analyse des marchés et études sectorielles</li>
-                </ul>
-                <div class="faq-contact-info">
-                  🎯 Focus sur l'Afrique de l'Ouest depuis 2015
-                </div>
-              </div>
-            </div>
+          <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between items-center text-center">
+            <h3 class="text-xl font-semibold brand-dark-blue mb-8">Quel est votre domaine d'activité</h3>
+            <button class="w-12 h-12 flex items-center justify-center bg-brand-red text-white rounded-md hover:bg-opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
           </div>
         </div>
-        <div class="faq-more">
-          <a href="#" class="faq-more-link">More questions ></a>
+        <div class="text-center mt-12">
+          <a href="#" class="text-sm font-semibold brand-red hover:underline">More questions ></a>
         </div>
       </div>
     </section>
   </main>
-
 
   <!-- ============================================ -->
   <!--                   Footer                     -->
@@ -306,338 +252,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    // FAQ Accordion Functionality - Version améliorée
-    document.addEventListener('DOMContentLoaded', function() {
-        initializeFAQ();
-        animateFAQCards();
-    });
 
-    function initializeFAQ() {
-        const faqCards = document.querySelectorAll('.faq-card');
-
-        faqCards.forEach((card, index) => {
-            const toggle = card.querySelector('.faq-toggle');
-            const header = card.querySelector('.faq-header');
-            const answer = card.querySelector('.faq-answer');
-
-            // Initialiser les attributs ARIA
-            card.setAttribute('tabindex', '0');
-            card.setAttribute('role', 'button');
-            card.setAttribute('aria-expanded', 'false');
-            card.setAttribute('data-index', index);
-
-            // Event listeners optimisés
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleFAQ(card);
-            });
-
-            header.addEventListener('click', () => {
-                toggleFAQ(card);
-            });
-
-            // Support clavier amélioré
-            card.addEventListener('keydown', (e) => {
-                handleKeyboardNavigation(e, card, faqCards);
-            });
-
-            // Optimisation pour le touch
-            card.addEventListener('touchend', (e) => {
-                e.preventDefault();
-                toggleFAQ(card);
-            });
-
-            // Préparation de l'animation
-            if (answer) {
-                answer.style.maxHeight = '0px';
-                answer.style.overflow = 'hidden';
-            }
-        });
-    }
-
-    function toggleFAQ(card) {
-        const isActive = card.classList.contains('active');
-        const answer = card.querySelector('.faq-answer');
-        const toggle = card.querySelector('.faq-toggle i');
-
-        // Fermer toutes les autres FAQ avec animation
-        document.querySelectorAll('.faq-card').forEach(otherCard => {
-            if (otherCard !== card && otherCard.classList.contains('active')) {
-                closeFAQ(otherCard);
-            }
-        });
-
-        // Toggle la FAQ cliquée
-        if (isActive) {
-            closeFAQ(card);
-        } else {
-            openFAQ(card);
-        }
-    }
-
-    function openFAQ(card) {
-        const answer = card.querySelector('.faq-answer');
-        const answerContent = card.querySelector('.faq-answer-content');
-
-        card.classList.add('active');
-        card.setAttribute('aria-expanded', 'true');
-
-        if (answer && answerContent) {
-            // Calculer la hauteur réelle du contenu
-            const contentHeight = answerContent.scrollHeight;
-            answer.style.maxHeight = contentHeight + 'px';
-
-            // Animation du contenu interne
-            setTimeout(() => {
-                answerContent.style.opacity = '1';
-                answerContent.style.transform = 'translateY(0)';
-            }, 150);
-
-            // Scroll intelligent vers la carte
-            setTimeout(() => {
-                scrollToCardIfNeeded(card);
-            }, 300);
-
-            // Déclencher l'animation des éléments de la liste
-            animateListItems(answerContent);
-        }
-    }
-
-    function closeFAQ(card) {
-        const answer = card.querySelector('.faq-answer');
-        const answerContent = card.querySelector('.faq-answer-content');
-
-        card.classList.remove('active');
-        card.setAttribute('aria-expanded', 'false');
-
-        if (answer && answerContent) {
-            // Animation inverse
-            answerContent.style.opacity = '0';
-            answerContent.style.transform = 'translateY(-10px)';
-
-            setTimeout(() => {
-                answer.style.maxHeight = '0px';
-            }, 100);
-        }
-    }
-
-    function handleKeyboardNavigation(e, currentCard, allCards) {
-        const currentIndex = parseInt(currentCard.getAttribute('data-index'));
-
-        switch (e.key) {
-            case 'Enter':
-            case ' ':
-                e.preventDefault();
-                toggleFAQ(currentCard);
-                break;
-
-            case 'ArrowRight':
-            case 'ArrowDown':
-                e.preventDefault();
-                const nextIndex = (currentIndex + 1) % allCards.length;
-                allCards[nextIndex].focus();
-                break;
-
-            case 'ArrowLeft':
-            case 'ArrowUp':
-                e.preventDefault();
-                const prevIndex = (currentIndex - 1 + allCards.length) % allCards.length;
-                allCards[prevIndex].focus();
-                break;
-
-            case 'Escape':
-                if (currentCard.classList.contains('active')) {
-                    closeFAQ(currentCard);
-                }
-                break;
-
-            case 'Home':
-                e.preventDefault();
-                allCards[0].focus();
-                break;
-
-            case 'End':
-                e.preventDefault();
-                allCards[allCards.length - 1].focus();
-                break;
-        }
-    }
-
-    function scrollToCardIfNeeded(card) {
-        const cardRect = card.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const scrollOffset = 100; // Espace supplémentaire
-
-        // Vérifier si la carte dépasse de la fenêtre
-        if (cardRect.bottom > windowHeight - scrollOffset) {
-            card.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'nearest'
-            });
-        }
-    }
-
-    function animateListItems(container) {
-        const listItems = container.querySelectorAll('.faq-answer-list li');
-        const contactInfo = container.querySelector('.faq-contact-info');
-
-        listItems.forEach((item, index) => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateX(-20px)';
-            item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-
-            setTimeout(() => {
-                item.style.opacity = '1';
-                item.style.transform = 'translateX(0)';
-            }, (index * 100) + 200);
-        });
-
-        // Animer l'info de contact
-        if (contactInfo) {
-            contactInfo.style.opacity = '0';
-            contactInfo.style.transform = 'scale(0.9)';
-            contactInfo.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-
-            setTimeout(() => {
-                contactInfo.style.opacity = '1';
-                contactInfo.style.transform = 'scale(1)';
-            }, (listItems.length * 100) + 300);
-        }
-    }
-
-    function animateFAQCards() {
-        const cards = document.querySelectorAll('.faq-card');
-
-        // Observer pour l'animation d'entrée
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, entryIndex) => {
-                if (entry.isIntersecting) {
-                    const cardIndex = Array.from(cards).indexOf(entry.target);
-
-                    // Animation d'entrée décalée
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, cardIndex * 150);
-
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        // Préparer et observer les cartes
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    }
-
-    // Gestion du redimensionnement optimisée
-    function handleFAQResize() {
-        const activeCards = document.querySelectorAll('.faq-card.active');
-
-        activeCards.forEach(card => {
-            const answer = card.querySelector('.faq-answer');
-            const answerContent = card.querySelector('.faq-answer-content');
-
-            if (answer && answerContent) {
-                // Recalculer la hauteur
-                answer.style.maxHeight = 'none';
-                const newHeight = answerContent.scrollHeight;
-                answer.style.maxHeight = newHeight + 'px';
-            }
-        });
-    }
-
-    // Gestionnaire de performance avec debounce amélioré
-    function debounce(func, wait, immediate) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                timeout = null;
-                if (!immediate) func(...args);
-            };
-            const callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func(...args);
-        };
-    }
-
-    // Event listeners globaux
-    window.addEventListener('resize', debounce(handleFAQResize, 250));
-
-    // Gestion de la visibilité de la page
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            // Pause des animations si la page n'est pas visible
-            document.querySelectorAll('.faq-card').forEach(card => {
-                const animations = card.getAnimations();
-                animations.forEach(animation => {
-                    animation.pause();
-                });
-            });
-        } else {
-            // Reprendre les animations
-            document.querySelectorAll('.faq-card').forEach(card => {
-                const animations = card.getAnimations();
-                animations.forEach(animation => {
-                    animation.play();
-                });
-            });
-        }
-    });
-
-    // Gestion des erreurs
-    window.addEventListener('error', (e) => {
-        console.warn('FAQ Error:', e.message);
-    });
-
-    // Nettoyage des event listeners (optionnel pour SPA)
-    function cleanupFAQ() {
-        document.querySelectorAll('.faq-card').forEach(card => {
-            const newCard = card.cloneNode(true);
-            card.parentNode.replaceChild(newCard, card);
-        });
-    }
-
-    // Export pour utilisation externe si nécessaire
-    window.FAQController = {
-        init: initializeFAQ,
-        toggle: toggleFAQ,
-        open: openFAQ,
-        close: closeFAQ,
-        cleanup: cleanupFAQ
-    };
-
-    // Analytics tracking (optionnel)
-    function trackFAQInteraction(action, cardIndex) {
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'faq_interaction', {
-                event_category: 'FAQ',
-                event_label: `Card ${cardIndex + 1}`,
-                action: action
-            });
-        }
-    }
-
-    // Ajout du tracking aux interactions
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.faq-card').forEach((card, index) => {
-            card.addEventListener('click', () => {
-                const action = card.classList.contains('active') ? 'close' : 'open';
-                trackFAQInteraction(action, index);
-            });
-        });
-    });
-    </script>
 </div>
 </body>
 </html>
