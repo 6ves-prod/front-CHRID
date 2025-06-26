@@ -6,6 +6,7 @@
     <title>Actualités, Analyses et Perspectives</title>
     <link rel="stylesheet" href="../src/static/css/theme.css">
     <link rel="stylesheet" href="../src/static/css/blog.css">
+    <link rel="stylesheet" href="../src/static/css/poste.css">
     <link rel="stylesheet" href="../src/static/css/common.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +55,7 @@
                         <li class="nav-item">
                             <a href="../pages/blog.html" class="nav-link">Actualité et blog</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a href="#careers" class="nav-link">Travailler avec nous</a>
                             <ul class="dropdown-menu">
                                 <li><a href="../pages/partenaire.html">Pourquoi être notre partenaire ?</a></li>
@@ -121,23 +122,68 @@
         <!-- ============================================ -->
         <!--             Filter Section                   -->
         <!-- ============================================ -->
-        <section class="pb-16 sm:pb-20">
-            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-sm font-semibold text-gray-500 mb-2">Recherche</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <select class="w-full bg-brand-dark-blue text-white px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-red">
-                        <option>Cote d'Ivoire</option>
+        <section class="jobs-filter-section">
+        <div class="container">
+            <div class="filter-header">
+                <h2>Rechercher un Article</h2>
+                <p>Utilisez les filtres ci-dessous pour trouver l'article que vous souhaitez</p>
+            </div>
+
+            <div class="jobs-filters">
+                <div class="filter-group">
+                    <label for="department-filter">Catégorie</label>
+                    <select id="department-filter" class="filter-select">
+                        <option value="">Tous les Catégories</option>
+                        <option value="recherche">Recherche & Analyse</option>
+                        <option value="projets">Gestion de Projets</option>
+                        <option value="communication">Communication</option>
+                        <option value="administration">Administration</option>
+                        <option value="finance">Finance & Comptabilité</option>
                     </select>
-                    <select class="w-full bg-brand-dark-blue text-white px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-red">
-                        <option>Social</option>
+                </div>
+
+                <div class="filter-group">
+                    <label for="level-filter">Partenaires</label>
+                    <select id="level-filter" class="filter-select">
+                        <option value="">Tous les partenaires</option>
+                        <option value="junior">Agence Emplois jeune</option>
+                        <option value="intermediate">Agence Emplois jeune</option>
+                        <option value="senior">Agence Emplois jeune</option>
+                        <option value="expert">Agence Emplois jeune</option>
                     </select>
-                    <select class="w-full bg-brand-dark-blue text-white px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-red">
-                        <option>9 Aug 2025</option>
+                </div>
+
+
+
+                <div class="filter-group">
+                    <label for="location-filter">Localisation</label>
+                    <select id="location-filter" class="filter-select">
+                        <option value="">Toutes les pays</option>
+                        <option value="abidjan">Côte d'Ivoire</option>
+                        <option value="ouagadougou">Burkina Faso</option>
+                        <option value="bamako">Ghana</option>
+                        <option value="remote">Togo</option>
                     </select>
-                    <button class="w-full bg-brand-red text-white font-semibold px-4 py-3 rounded-md hover:bg-opacity-90 transition">Search</button>
+                </div>
+
+                <button class="filter-reset-btn" id="reset-filters">
+                    <i class="fas fa-undo"></i> Rechercher
+                </button>
+            </div>
+
+            <div class="results-summary">
+                <span id="results-count">20 articles trouvés</span>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- ============================================ -->
         <!--             Blog Grid Section                -->
@@ -340,6 +386,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../src/static/js/common.js"></script>
 </div>
 </body>
 </html>
