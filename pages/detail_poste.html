@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIHD - Développeur Frontend React/Vue.js</title>
+
+    <!-- CSS Files - Respectant votre structure -->
+    <link rel="stylesheet" href="../src/static/css/theme.css">
+    <link rel="stylesheet" href="../src/static/css/common.css">
+    <link rel="stylesheet" href="../src/static/css/detail_poste.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation - Exactement comme dans votre projet -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <!-- Logo -->
+                <div class="navbar-brand">
+                    <a href="home.html" class="logo">
+                        <span class="logo-text">CRIHD</span>
+                    </a>
+                </div>
+
+                <!-- Menu principal -->
+                <nav class="navbar-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Qui sommes nous ?</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/mission.html">Mission</a></li>
+                                <li><a href="../pages/equipe.html">Équipe</a></li>
+                                <li><a href="../pages/direction.html">Direction</a></li>
+                                <li><a href="../pages/politique.html">Politiques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Ce que nous faisons ?</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/service.html">Services</a></li>
+                                <li><a href="../pages/projet.html">Projets</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/blog.html" class="nav-link">Actualité et blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Travailler avec nous</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../pages/partenaire.html">Pourquoi être notre partenaire ?</a></li>
+                                <li><a href="../pages/carriere.html">Pourquoi Travailler pour nous ?</a></li>
+                                <li><a href="../pages/poste.html" class="active">Liste des postes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/contact.html" class="nav-link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Actions de droite -->
+                <div class="navbar-actions">
+                    <div class="language-switch">
+                        <span class="lang-current">FR</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option">EN</span>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../pages/poste.html" class="breadcrumb-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour aux postes
+                </a>
+                <span class="breadcrumb-text">Développeur Frontend</span>
+                <div class="breadcrumb-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Hero du poste -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="hero-layout">
+                <!-- Colonne de gauche - Informations principales -->
+                <div class="hero-content">
+                    <div class="post-company">
+                        <div class="company-logo">
+                            <img src="https://via.placeholder.com/60x60" alt="Logo CRIHD">
+                        </div>
+                        <div class="company-info">
+                            <h1 class="post-title">Développeur Frontend React/Vue.js</h1>
+                            <p class="company-name">CRIHD - Centre de Recherche et d'Innovation</p>
+                        </div>
+                    </div>
+
+                    <div class="post-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Abidjan, Côte d'Ivoire</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>CDI - Temps plein</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-euro-sign"></i>
+                            <span>Selon expérience</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Publié il y a 3 jours</span>
+                        </div>
+                    </div>
+
+                    <div class="post-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Agile</span>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Actions -->
+                <div class="hero-actions">
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Postuler maintenant
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-bookmark"></i>
+                            Sauvegarder
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-share-alt"></i>
+                            Partager
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <section class="post-content-section">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Contenu principal -->
+                <div class="main-content">
+                    <!-- Description du poste -->
+                    <div class="content-card">
+                        <h2 class="section-title">Description du poste</h2>
+                        <div class="section-content">
+                            <p>Nous recherchons un développeur Frontend expérimenté pour rejoindre notre équipe technique au CRIHD. Vous serez responsable du développement d'applications web innovantes qui soutiennent nos missions de recherche et d'innovation en développement durable.</p>
+
+                            <p>Dans ce rôle stratégique, vous collaborerez étroitement avec nos équipes de recherche pour créer des interfaces utilisateur intuitives qui facilitent l'accès à nos données et analyses. Vous contribuerez directement à l'impact social de nos projets en Côte d'Ivoire et en Afrique de l'Ouest.</p>
+                        </div>
+                    </div>
+
+                    <!-- Missions principales -->
+                    <div class="content-card">
+                        <h2 class="section-title">Vos missions principales</h2>
+                        <div class="section-content">
+                            <ul class="mission-list">
+                                <li>Développer des applications web réactives avec React et Vue.js pour nos plateformes de recherche</li>
+                                <li>Collaborer avec les équipes UX/UI pour implémenter des interfaces intuitives</li>
+                                <li>Optimiser les performances des applications et assurer la compatibilité cross-browser</li>
+                                <li>Intégrer nos APIs de données de recherche et créer des visualisations interactives</li>
+                                <li>Maintenir et améliorer notre codebase existant selon les bonnes pratiques</li>
+                                <li>Participer aux revues de code et aux cérémonies Agile de l'équipe</li>
+                                <li>Contribuer à la documentation technique et aux guides d'utilisation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Profil recherché -->
+                    <div class="content-card">
+                        <h2 class="section-title">Profil recherché</h2>
+                        <div class="section-content">
+                            <div class="requirements-grid">
+                                <div class="requirement-group">
+                                    <h3>Compétences techniques requises</h3>
+                                    <ul>
+                                        <li>3+ années d'expérience en développement Frontend</li>
+                                        <li>Maîtrise de JavaScript ES6+, HTML5, CSS3</li>
+                                        <li>Expérience solide avec React et/ou Vue.js</li>
+                                        <li>Connaissance des outils de build modernes (Webpack, Vite)</li>
+                                        <li>Maîtrise de Git et des workflows collaboratifs</li>
+                                        <li>Expérience avec les APIs REST et GraphQL</li>
+                                    </ul>
+                                </div>
+                                <div class="requirement-group">
+                                    <h3>Compétences appréciées</h3>
+                                    <ul>
+                                        <li>TypeScript et développement type-safe</li>
+                                        <li>Tests unitaires et d'intégration (Jest, Cypress)</li>
+                                        <li>Préprocesseurs CSS (Sass, SCSS)</li>
+                                        <li>Notions de UX/UI Design</li>
+                                        <li>Expérience avec D3.js pour la visualisation de données</li>
+                                        <li>Connaissance des méthodes Agile/Scrum</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ce que nous offrons -->
+                    <div class="content-card">
+                        <h2 class="section-title">Ce que nous offrons</h2>
+                        <div class="section-content">
+                            <div class="benefits-grid">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-laptop"></i>
+                                    </div>
+                                    <div class="benefit-content">
+                                        <h4>Télétravail flexible</h4>
+                                        <p>Politique de travail hybride adaptée</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="benefit-content">
+                                        <h4>Formation continue</h4>
+                                        <p>Budget formation et conférences</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="benefit-content">
+                                        <h4>Impact social</h4>
+                                        <p>Contribuer au développement durable</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="benefit-content">
+                                        <h4>Équipe internationale</h4>
+                                        <p>Environnement multiculturel stimulant</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="benefit-content">
+                                        <h4>Horaires flexibles</h4>
+                                        <p>Conciliation vie pro/perso</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="benefit-content">
+                                        <h4>Protection sociale</h4>
+                                        <p>Couverture santé complète</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Informations entreprise -->
+                    <div class="sidebar-card">
+                        <h3 class="card-title">À propos du CRIHD</h3>
+                        <div class="company-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Secteur</span>
+                                <span class="detail-value">Recherche & Innovation</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Taille</span>
+                                <span class="detail-value">20-50 employés</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Fondé en</span>
+                                <span class="detail-value">2020</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Localisation</span>
+                                <span class="detail-value">Abidjan, Côte d'Ivoire</span>
+                            </div>
+                        </div>
+                        <div class="company-description">
+                            <p>Le CRIHD est un centre de recherche dédié à l'innovation pour le développement durable en Afrique de l'Ouest.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact recruteur -->
+                    <div class="sidebar-card">
+                        <h3 class="card-title">Contact recruteur</h3>
+                        <div class="recruiter-info">
+                            <div class="recruiter-avatar">
+                                <img src="https://via.placeholder.com/50x50" alt="Recruteur">
+                            </div>
+                            <div class="recruiter-details">
+                                <h4 class="recruiter-name">Marie Kouassi</h4>
+                                <p class="recruiter-title">Responsable RH</p>
+                                <button class="btn btn-contact">
+                                    <i class="fas fa-envelope"></i>
+                                    Contacter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Postes similaires -->
+                    <div class="sidebar-card">
+                        <h3 class="card-title">Postes similaires</h3>
+                        <div class="similar-jobs">
+                            <a href="#" class="similar-job">
+                                <h4>Analyste de données</h4>
+                                <p class="job-company">CRIHD - Abidjan</p>
+                                <span class="job-type">CDI</span>
+                            </a>
+                            <a href="#" class="similar-job">
+                                <h4>UX/UI Designer</h4>
+                                <p class="job-company">CRIHD - Abidjan</p>
+                                <span class="job-type">CDI</span>
+                            </a>
+                            <a href="#" class="similar-job">
+                                <h4>Chef de projet digital</h4>
+                                <p class="job-company">CRIHD - Abidjan</p>
+                                <span class="job-type">CDI</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer de candidature fixe -->
+    <div class="application-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="job-summary">
+                    <h3>Développeur Frontend React/Vue.js</h3>
+                    <p>CRIHD - Abidjan, Côte d'Ivoire</p>
+                </div>
+                <div class="footer-actions">
+                    <button class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Postuler maintenant
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer principal -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">CRIHD</h2>
+                        <p class="footer-description">
+                            Centre de Recherche et d'Innovation pour le Développement Humain, œuvrant pour un développement durable et inclusif en Afrique de l'Ouest.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3 class="footer-title">Organisation</h3>
+                            <ul class="footer-menu">
+                                <li><a href="../pages/mission.html">Mission</a></li>
+                                <li><a href="../pages/equipe.html">Équipe</a></li>
+                                <li><a href="../pages/direction.html">Direction</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Nos activités</h3>
+                            <ul class="footer-menu">
+                                <li><a href="../pages/service.html">Services</a></li>
+                                <li><a href="../pages/projet.html">Projets</a></li>
+                                <li><a href="../pages/blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Collaborer</h3>
+                            <ul class="footer-menu">
+                                <li><a href="../pages/partenaire.html">Partenaires</a></li>
+                                <li><a href="../pages/carriere.html">Carrières</a></li>
+                                <li><a href="../pages/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
