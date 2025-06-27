@@ -143,15 +143,11 @@
                     </div>
 
                     <!-- NOUVEAU: Select2 pour les tags -->
-                    <div class="filter-group">
-                        <label for="tags-filter">Tags</label>
-                        <select id="tags-filter" class="filter-select" multiple>
-                            <option value="numerique">Numérique</option>
-                            <option value="innovation">Innovation</option>
-                            <option value="inclusion">Inclusion sociale</option>
-                            <option value="formation">Formation</option>
-                            <option value="fintech">Fintech</option>
-                            <option value="agriculture">Agriculture</option>
+                    <div class="selec2">
+                        <label for="search-input">Tags</label>
+                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+                          <option value="AL">Alabama</option>
+                          <option value="WY">Wyoming</option>
                         </select>
                     </div>
 
@@ -164,6 +160,8 @@
                         </div>
                     </div>
 
+
+
                     <div class="filter-group">
                         <button class="filter-reset-btn" id="reset-filters">
                             <i class="fas fa-undo"></i> Rechercher
@@ -173,14 +171,6 @@
 
                 <div class="results-summary">
                     <span id="results-count">12 articles trouvés</span>
-                    <div class="view-toggle">
-                        <button class="view-btn active" data-view="grid">
-                            <i class="fas fa-th-large"></i>
-                        </button>
-                        <button class="view-btn" data-view="list">
-                            <i class="fas fa-list"></i>
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>
@@ -204,12 +194,7 @@
                             </div>
                             <h3 class="project-title">Diversité linguistique et patrimoine culturel du Nord ivoirien</h3>
                             <p class="project-description">Résultats de notre étude approfondie sur la préservation des langues locales et leur rôle crucial dans l'identité culturelle des communautés du nord de la Côte d'Ivoire.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Dr. Aboubacar Fofana" class="author-avatar">
-                                <span class="author-name">Dr. Aboubacar Fofana</span>
-                                <span class="reading-time">8 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -225,12 +210,7 @@
                             </div>
                             <h3 class="project-title">Renforcement des systèmes de santé : Bilan et perspectives</h3>
                             <p class="project-description">Analyse détaillée des résultats obtenus dans le renforcement des infrastructures sanitaires en Côte d'Ivoire et recommandations stratégiques pour l'avenir.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=32&h=32&fit=crop&crop=face" alt="Dr. Aminata Traoré" class="author-avatar">
-                                <span class="author-name">Dr. Aminata Traoré</span>
-                                <span class="reading-time">6 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -246,12 +226,7 @@
                             </div>
                             <h3 class="project-title">Inclusion sociale et dynamiques du marché du travail</h3>
                             <p class="project-description">Analyse approfondie des politiques d'emploi et leur impact concret sur l'insertion des populations vulnérables dans l'économie formelle ivoirienne.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="Mme Fatou Diabaté" class="author-avatar">
-                                <span class="author-name">Mme Fatou Diabaté</span>
-                                <span class="reading-time">7 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -267,12 +242,7 @@
                             </div>
                             <h3 class="project-title">Certification RainForest : Impact sur la productivité agricole</h3>
                             <p class="project-description">Étude comparative sur l'adoption des pratiques durables et leur effet mesurable sur la productivité des exploitations agricoles certifiées en Côte d'Ivoire.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=32&h=32&fit=crop&crop=face" alt="Dr. Marie Coulibaly" class="author-avatar">
-                                <span class="author-name">Dr. Marie Coulibaly</span>
-                                <span class="reading-time">5 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -288,12 +258,7 @@
                             </div>
                             <h3 class="project-title">Éducation inclusive : Défis et innovations pédagogiques</h3>
                             <p class="project-description">Comment l'innovation pédagogique peut transformer l'accès à l'éducation pour les populations vulnérables en Afrique de l'Ouest : retours d'expérience et perspectives.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Prof. Jean-Baptiste Koffi" class="author-avatar">
-                                <span class="author-name">Prof. Jean-Baptiste Koffi</span>
-                                <span class="reading-time">9 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -309,12 +274,7 @@
                             </div>
                             <h3 class="project-title">Transformation numérique pour le développement</h3>
                             <p class="project-description">Initiative stratégique pour intégrer efficacement les technologies numériques dans les stratégies de développement local et régional en Afrique subsaharienne.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face" alt="Dr. Youssouf Sangaré" class="author-avatar">
-                                <span class="author-name">Dr. Youssouf Sangaré</span>
-                                <span class="reading-time">6 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -330,12 +290,7 @@
                             </div>
                             <h3 class="project-title">Approches participatives en développement communautaire</h3>
                             <p class="project-description">Méthodologies innovantes pour un développement centré sur les communautés : lessons apprises et recommandations pour les praticiens du développement.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="Dr. Kouadio Assemian" class="author-avatar">
-                                <span class="author-name">Dr. Kouadio Assemian</span>
-                                <span class="reading-time">10 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -351,12 +306,7 @@
                             </div>
                             <h3 class="project-title">Santé communautaire et participation citoyenne</h3>
                             <p class="project-description">L'importance de l'engagement communautaire dans l'amélioration durable des services de santé primaire : études de cas en milieu rural ivoirien.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=32&h=32&fit=crop&crop=face" alt="Dr. Kadiatou Koné" class="author-avatar">
-                                <span class="author-name">Dr. Kadiatou Koné</span>
-                                <span class="reading-time">7 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -372,12 +322,7 @@
                             </div>
                             <h3 class="project-title">Préservation de la biodiversité et développement durable</h3>
                             <p class="project-description">Concilier conservation de la biodiversité et besoins de développement économique : défis et opportunités pour les communautés forestières ivoiriennes.</p>
-                            <div class="blog-author-info">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Prof. Mamadou Diallo" class="author-avatar">
-                                <span class="author-name">Prof. Mamadou Diallo</span>
-                                <span class="reading-time">8 min de lecture</span>
-                            </div>
-                            <a href="#" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
                 </div>
@@ -478,80 +423,20 @@
             </div>
         </div>
     </footer>
+    </div>
 
     <script src="../src/static/js/common.js"></script>
-    // Ajoutez ceci avant la fermeture
+    // Ajoutez ceci avant la fermeture </body> de votre pages/blog.html
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            // Initialisation de Select2 pour les selects multiples
-            $('#department-filter').select2({
-                placeholder: "Sélectionnez un ou plusieurs départements",
-                allowClear: true,
-                language: "fr"
-            });
 
-            $('#contract-filter').select2({
-                placeholder: "Sélectionnez un ou plusieurs types de contrat",
-                allowClear: true,
-                language: "fr"
-            });
-
-            // Initialisation de Select2 pour les selects simples
-            $('#level-filter').select2({
-                placeholder: "Sélectionnez un niveau",
-                allowClear: true,
-                language: "fr"
-            });
-
-            $('#location-filter').select2({
-                placeholder: "Sélectionnez une localisation",
-                allowClear: true,
-                language: "fr"
-            });
-
-            // Gestion du bouton de recherche/réinitialisation
-            $('#reset-filters').click(function() {
-                // Réinitialiser tous les filtres
-                $('#search-input').val('');
-                $('#department-filter').val(null).trigger('change');
-                $('#level-filter').val(null).trigger('change');
-                $('#contract-filter').val(null).trigger('change');
-                $('#location-filter').val(null).trigger('change');
-
-                // Simuler une nouvelle recherche
-                updateResultsCount();
-            });
-
-            // Gestion des boutons de vue
-            $('.view-btn').click(function() {
-                $('.view-btn').removeClass('active');
-                $(this).addClass('active');
-
-                const view = $(this).data('view');
-                console.log('Vue changée vers:', view);
-            });
-
-            // Fonction pour mettre à jour le compteur de résultats
-            function updateResultsCount() {
-                const count = Math.floor(Math.random() * 50) + 1;
-                $('#results-count').text(`${count} poste${count > 1 ? 's' : ''} trouvé${count > 1 ? 's' : ''}`);
-            }
-
-            // Écouter les changements de filtres pour mettre à jour les résultats
-            $('#search-input, #department-filter, #level-filter, #contract-filter, #location-filter').on('change keyup', function() {
-                setTimeout(updateResultsCount, 300);
-            });
-
-            // Animation d'entrée retardée pour les éléments
-            setTimeout(function() {
-                $('.filter-group').addClass('visible');
-            }, 100);
-        });
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
     </script>
-</div>
+
 </body>
 </html>

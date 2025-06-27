@@ -520,15 +520,19 @@ body.menu-open {
 }
 
 .btn-primary {
-  background: var(--gradient-primary);
-  color: var(--text-white);
-  border-color: var(--primary-color);
+  background: #c53c3c;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
