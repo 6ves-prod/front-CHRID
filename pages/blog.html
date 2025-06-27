@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualités, Analyses et Perspectives</title>
     <link rel="stylesheet" href="../src/static/css/theme.css">
-    <link rel="stylesheet" href="../src/static/css/blog.css">
+
     <link rel="stylesheet" href="../src/static/css/poste.css">
     <link rel="stylesheet" href="../src/static/css/common.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -178,157 +180,157 @@
         <!-- ============================================ -->
         <!--             Blog Grid Section                -->
         <!-- ============================================ -->
-        <section class="projects-section">
+        <section class="card-section">
             <div class="container">
                 <!-- Grille des articles -->
-                <div class="projects-grid" id="blog-grid">
+                <div class="card-grid" id="blog-grid">
                     <!-- Article 1 -->
-                    <article class="project-card blog-article" data-category="recherche" data-author="direction" data-date="2025-06-25">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="recherche" data-author="direction" data-date="2025-06-25">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop" alt="Analyse linguistique">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Recherche Linguistique</span>
-                                <span class="project-duration">25 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Recherche Linguistique</span>
+                                <span class="card-duration">25 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Diversité linguistique et patrimoine culturel du Nord ivoirien</h3>
-                            <p class="project-description">Résultats de notre étude approfondie sur la préservation des langues locales et leur rôle crucial dans l'identité culturelle des communautés du nord de la Côte d'Ivoire.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Diversité linguistique et patrimoine culturel du Nord ivoirien</h3>
+                            <p class="card-description">Résultats de notre étude approfondie sur la préservation des langues locales et leur rôle crucial dans l'identité culturelle des communautés du nord de la Côte d'Ivoire.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 2 -->
-                    <article class="project-card blog-article" data-category="sante" data-author="recherche" data-date="2025-06-22">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="sante" data-author="recherche" data-date="2025-06-22">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop" alt="Systèmes de santé">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Santé Publique</span>
-                                <span class="project-duration">22 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Santé Publique</span>
+                                <span class="card-duration">22 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Renforcement des systèmes de santé : Bilan et perspectives</h3>
-                            <p class="project-description">Analyse détaillée des résultats obtenus dans le renforcement des infrastructures sanitaires en Côte d'Ivoire et recommandations stratégiques pour l'avenir.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Renforcement des systèmes de santé : Bilan et perspectives</h3>
+                            <p class="card-description">Analyse détaillée des résultats obtenus dans le renforcement des infrastructures sanitaires en Côte d'Ivoire et recommandations stratégiques pour l'avenir.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 3 -->
-                    <article class="project-card blog-article" data-category="inclusion" data-author="expert" data-date="2025-06-20">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="inclusion" data-author="expert" data-date="2025-06-20">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop" alt="Inclusion sociale">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Inclusion Sociale</span>
-                                <span class="project-duration">20 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Inclusion Sociale</span>
+                                <span class="card-duration">20 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Inclusion sociale et dynamiques du marché du travail</h3>
-                            <p class="project-description">Analyse approfondie des politiques d'emploi et leur impact concret sur l'insertion des populations vulnérables dans l'économie formelle ivoirienne.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Inclusion sociale et dynamiques du marché du travail</h3>
+                            <p class="card-description">Analyse approfondie des politiques d'emploi et leur impact concret sur l'insertion des populations vulnérables dans l'économie formelle ivoirienne.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 4 -->
-                    <article class="project-card blog-article" data-category="environnement" data-author="recherche" data-date="2025-06-18">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="environnement" data-author="recherche" data-date="2025-06-18">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop" alt="Agriculture durable">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Développement Durable</span>
-                                <span class="project-duration">18 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Développement Durable</span>
+                                <span class="card-duration">18 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Certification RainForest : Impact sur la productivité agricole</h3>
-                            <p class="project-description">Étude comparative sur l'adoption des pratiques durables et leur effet mesurable sur la productivité des exploitations agricoles certifiées en Côte d'Ivoire.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Certification RainForest : Impact sur la productivité agricole</h3>
+                            <p class="card-description">Étude comparative sur l'adoption des pratiques durables et leur effet mesurable sur la productivité des exploitations agricoles certifiées en Côte d'Ivoire.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 5 -->
-                    <article class="project-card blog-article" data-category="education" data-author="partenaire" data-date="2025-06-15">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="education" data-author="partenaire" data-date="2025-06-15">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=250&fit=crop" alt="Éducation inclusive">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Éducation</span>
-                                <span class="project-duration">15 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Éducation</span>
+                                <span class="card-duration">15 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Éducation inclusive : Défis et innovations pédagogiques</h3>
-                            <p class="project-description">Comment l'innovation pédagogique peut transformer l'accès à l'éducation pour les populations vulnérables en Afrique de l'Ouest : retours d'expérience et perspectives.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Éducation inclusive : Défis et innovations pédagogiques</h3>
+                            <p class="card-description">Comment l'innovation pédagogique peut transformer l'accès à l'éducation pour les populations vulnérables en Afrique de l'Ouest : retours d'expérience et perspectives.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 6 -->
-                    <article class="project-card blog-article" data-category="innovation" data-author="direction" data-date="2025-06-12">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="innovation" data-author="direction" data-date="2025-06-12">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Innovation numérique">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Innovation</span>
-                                <span class="project-duration">12 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Innovation</span>
+                                <span class="card-duration">12 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Transformation numérique pour le développement</h3>
-                            <p class="project-description">Initiative stratégique pour intégrer efficacement les technologies numériques dans les stratégies de développement local et régional en Afrique subsaharienne.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Transformation numérique pour le développement</h3>
+                            <p class="card-description">Initiative stratégique pour intégrer efficacement les technologies numériques dans les stratégies de développement local et régional en Afrique subsaharienne.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 7 -->
-                    <article class="project-card blog-article" data-category="recherche" data-author="expert" data-date="2025-06-10">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="recherche" data-author="expert" data-date="2025-06-10">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=250&fit=crop" alt="Développement communautaire">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Recherche</span>
-                                <span class="project-duration">10 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Recherche</span>
+                                <span class="card-duration">10 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Approches participatives en développement communautaire</h3>
-                            <p class="project-description">Méthodologies innovantes pour un développement centré sur les communautés : lessons apprises et recommandations pour les praticiens du développement.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Approches participatives en développement communautaire</h3>
+                            <p class="card-description">Méthodologies innovantes pour un développement centré sur les communautés : lessons apprises et recommandations pour les praticiens du développement.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 8 -->
-                    <article class="project-card blog-article" data-category="sante" data-author="partenaire" data-date="2025-06-08">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="sante" data-author="partenaire" data-date="2025-06-08">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop" alt="Santé communautaire">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Santé</span>
-                                <span class="project-duration">8 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Santé</span>
+                                <span class="card-duration">8 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Santé communautaire et participation citoyenne</h3>
-                            <p class="project-description">L'importance de l'engagement communautaire dans l'amélioration durable des services de santé primaire : études de cas en milieu rural ivoirien.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Santé communautaire et participation citoyenne</h3>
+                            <p class="card-description">L'importance de l'engagement communautaire dans l'amélioration durable des services de santé primaire : études de cas en milieu rural ivoirien.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <!-- Article 9 -->
-                    <article class="project-card blog-article" data-category="environnement" data-author="recherche" data-date="2025-06-05">
-                        <div class="project-image">
+                    <article class="card blog-article" data-category="environnement" data-author="recherche" data-date="2025-06-05">
+                        <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop" alt="Biodiversité">
                         </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-category">Environnement</span>
-                                <span class="project-duration">5 Juin 2025</span>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Environnement</span>
+                                <span class="card-duration">5 Juin 2025</span>
                             </div>
-                            <h3 class="project-title">Préservation de la biodiversité et développement durable</h3>
-                            <p class="project-description">Concilier conservation de la biodiversité et besoins de développement économique : défis et opportunités pour les communautés forestières ivoiriennes.</p>
-                            <a href="../pages/detail_blog.html" class="project-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="card-title">Préservation de la biodiversité et développement durable</h3>
+                            <p class="card-description">Concilier conservation de la biodiversité et besoins de développement économique : défis et opportunités pour les communautés forestières ivoiriennes.</p>
+                            <a href="../pages/detail_blog.html" class="card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
                 </div>
 
                 <!-- Pagination -->
-                <div class="projects-pagination">
+                <div class="card-pagination">
                     <button class="pagination-btn prev" disabled>
                         <i class="fas fa-chevron-left"></i> Précédent
                     </button>
@@ -337,13 +339,12 @@
                         <button class="page-number">2</button>
                         <button class="page-number">3</button>
                         <span class="pagination-dots">...</span>
-                        <button class="page-number">6</button>
+                        <button class="page-number">8</button>
                     </div>
                     <button class="pagination-btn next">
                         Suivant <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
-            </div>
         </section>
     </main>
 
