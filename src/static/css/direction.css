@@ -1,551 +1,890 @@
 /* ==========================================
-   CRIHD DIRECTION PAGE - CSS SPÉCIFIQUE
+   CRIHD DIRECTION PAGE - STYLE COHÉRENT
    ========================================== */
 
-/* Extensions spécifiques pour la page Direction */
+/* Réutilise les styles existants avec extensions spécifiques */
 
-/* Section Message du Directeur - Style premium */
-.director-message-section {
-    position: relative;
-    overflow: hidden;
+/* ==========================================
+   MESSAGE DU DIRECTEUR
+   ========================================== */
+
+.director-content {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 60px;
 }
 
-.director-message-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg,
-        rgba(197, 60, 60, 0.05) 0%,
-        rgba(44, 62, 80, 0.05) 50%,
-        rgba(197, 60, 60, 0.05) 100%);
-    z-index: 1;
-}
-
-.director-message-section > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Cartes de vision stratégique */
-.vision-card {
-    position: relative;
-    background: white;
-    transition: all 0.4s ease;
-    border: 3px solid transparent;
-    overflow: hidden;
-}
-
-.vision-card:hover {
-    border-color: #c53c3c;
-    transform: translateY(-16px);
-    box-shadow: 0 25px 50px rgba(197, 60, 60, 0.15);
-}
-
-.vision-card.featured {
-    background: linear-gradient(135deg, #c53c3c 0%, #a73030 100%);
-    color: white;
-    border-color: #a73030;
-}
-
-.vision-card.featured:hover {
-    transform: translateY(-16px) scale(1.02);
-    box-shadow: 0 30px 60px rgba(197, 60, 60, 0.25);
-}
-
-/* Effet de géométrie sur les cartes */
-.vision-card::after {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(45deg,
-        rgba(255, 255, 255, 0.1) 0%,
-        transparent 50%);
-    border-radius: 50%;
-    transition: all 0.5s ease;
-    opacity: 0;
-}
-
-.vision-card:hover::after {
-    opacity: 1;
-    transform: scale(1.5);
-}
-
-/* Section Gouvernance avec timeline */
-.governance-timeline {
-    position: relative;
-    padding-left: 40px;
-}
-
-.governance-timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, #c53c3c 0%, #2c3e50 100%);
-    border-radius: 2px;
-}
-
-.governance-item {
-    position: relative;
-    margin-bottom: 40px;
-    padding: 24px;
+.director-profile {
     background: white;
     border-radius: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.governance-item:hover {
-    transform: translateX(8px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+.director-profile:hover {
+    transform: translateY(-4px);
 }
 
-.governance-item::before {
-    content: '';
+.profile-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    padding: 32px;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.profile-title {
+    color: #c53c3c;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.profile-details p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.profile-details strong {
+    color: #2c3e50;
+}
+
+.director-message {
+    padding-left: 40px;
+    border-left: 4px solid #c53c3c;
+}
+
+.director-quote {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 32px;
+    padding: 32px;
+    background: #f8f9fa;
+    border-left: 4px solid #c53c3c;
+    position: relative;
+}
+
+.director-quote::before {
+    content: '"';
+    font-size: 4rem;
+    color: rgba(197, 60, 60, 0.2);
     position: absolute;
-    left: -52px;
-    top: 32px;
-    width: 16px;
-    height: 16px;
-    background: #c53c3c;
-    border: 4px solid white;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px #c53c3c;
+    top: 16px;
+    left: 16px;
+    font-family: serif;
+    line-height: 1;
 }
 
-/* Organigramme de direction */
-.org-chart {
+.message-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 24px;
+}
+
+.signature {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 2px solid #e5e7eb;
+    text-align: right;
+}
+
+.signature-name {
+    display: block;
+    font-weight: 700;
+    color: #c53c3c;
+    margin-bottom: 4px;
+}
+
+.signature-title {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ==========================================
+   STRUCTURE DE GOUVERNANCE - LAYOUT HORIZONTAL
+   ========================================== */
+
+.governance-horizontal {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    padding: 40px 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.org-level {
+.governance-row {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    position: relative;
+    gap: 32px;
+    width: 100%;
 }
 
-.org-box {
+.governance-row.top-level,
+.governance-row.middle-level {
+    justify-content: center;
+}
+
+.governance-row.bottom-level {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.governance-card {
     background: white;
-    border: 2px solid #e5e7eb;
-    padding: 20px 24px;
+    padding: 32px 24px;
     text-align: center;
-    min-width: 200px;
+    border: 2px solid #e5e7eb;
+    border-radius: 0;
+    min-width: 220px;
+    flex: 1;
+    max-width: 280px;
     transition: all 0.3s ease;
     position: relative;
 }
 
-.org-box:hover {
+.governance-card:hover {
     border-color: #c53c3c;
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(197, 60, 60, 0.1);
 }
 
-.org-box.ceo {
+.governance-card.board {
     background: #c53c3c;
     color: white;
     border-color: #a73030;
 }
 
-.org-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.governance-card.director {
+    background: #2c3e50;
+    color: white;
+    border-color: #34495e;
 }
 
-.org-box.ceo .org-title {
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.card-header i {
+    font-size: 20px;
+    color: #c53c3c;
+}
+
+.governance-card.board .card-header i,
+.governance-card.director .card-header i {
     color: white;
 }
 
-.org-name {
+.card-header h4 {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin: 0;
 }
 
-.org-department {
-    font-size: 12px;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
+.governance-card p {
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    font-weight: 500;
 }
 
-.org-box.ceo .org-department {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Lignes de connexion organigramme */
-.org-connection {
-    position: absolute;
-    background: #c53c3c;
-    opacity: 0.6;
-}
-
-.org-connection.vertical {
-    width: 2px;
-    height: 32px;
-    top: -32px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.org-connection.horizontal {
-    height: 2px;
-    top: -16px;
-}
-
-/* Section rapports avec design moderne */
-.reports-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-}
-
-.report-card {
-    background: white;
-    border-radius: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    border: 1px solid #e5e7eb;
-    position: relative;
-}
-
-.report-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border-color: #c53c3c;
-}
-
-.report-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #c53c3c 0%, #a73030 100%);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.report-card:hover::before {
-    transform: scaleX(1);
-}
-
-.report-header {
-    padding: 24px;
-    background: #f8f9fa;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.report-type {
-    font-size: 12px;
+.card-role {
+    display: inline-block;
+    background: rgba(197, 60, 60, 0.1);
     color: #c53c3c;
-    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 8px;
 }
 
-.report-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 8px;
-}
-
-.report-year {
-    font-size: 14px;
-    color: #6b7280;
-}
-
-.report-content {
-    padding: 24px;
-}
-
-.report-description {
-    color: #6b7280;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.report-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 20px;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 12px;
-    background: #f8f9fa;
-    border-radius: 0;
-}
-
-.stat-number {
-    font-size: 20px;
-    font-weight: 700;
-    color: #c53c3c;
-    display: block;
-}
-
-.stat-label {
-    font-size: 11px;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-}
-
-.report-actions {
-    display: flex;
-    gap: 12px;
-}
-
-.report-btn {
-    flex: 1;
-    padding: 10px 16px;
-    border: 2px solid #e5e7eb;
-    background: white;
-    color: #6b7280;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 0;
-}
-
-.report-btn:hover,
-.report-btn.primary {
-    border-color: #c53c3c;
-    background: #c53c3c;
+.governance-card.board .card-role,
+.governance-card.director .card-role {
+    background: rgba(255, 255, 255, 0.2);
     color: white;
 }
 
-/* Indicateurs de performance */
-.performance-indicators {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-    margin: 40px 0;
+/* Flèches de connexion */
+.connection-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c53c3c;
+    font-size: 24px;
+    margin: 8px 0;
 }
 
-.indicator-card {
-    background: white;
-    padding: 32px 24px;
+/* Processus décisionnels - Layout horizontal */
+.decision-process {
+    margin-top: 80px;
+}
+
+.process-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
     text-align: center;
+    margin-bottom: 48px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step {
+    text-align: center;
+    padding: 24px 20px;
+    background: white;
+    border: 2px solid #e5e7eb;
     border-radius: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    min-width: 160px;
+    flex: 1;
+    max-width: 200px;
 }
 
-.indicator-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+.process-step:hover {
+    border-color: #c53c3c;
+    transform: translateY(-4px);
 }
 
-.indicator-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(135deg,
-        rgba(197, 60, 60, 0.05) 0%,
-        rgba(197, 60, 60, 0.02) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.indicator-card:hover::before {
-    opacity: 1;
-}
-
-.indicator-icon {
-    width: 64px;
-    height: 64px;
+.step-number {
+    width: 50px;
+    height: 50px;
     background: #c53c3c;
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 24px;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.indicator-card:hover .indicator-icon {
-    transform: scale(1.1) rotate(5deg);
-    background: #a73030;
-}
-
-.indicator-value {
-    font-size: 32px;
     font-weight: 700;
-    color: #c53c3c;
+    font-size: 18px;
+    margin: 0 auto 16px;
+}
+
+.process-step h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
     margin-bottom: 8px;
-    font-family: 'Inter', sans-serif;
 }
 
-.indicator-label {
-    font-size: 14px;
+.process-step p {
+    font-size: 13px;
     color: #6b7280;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1.4;
 }
 
-/* Animations spécifiques direction */
-@media (prefers-reduced-motion: no-preference) {
-    .vision-card,
-    .governance-item,
-    .report-card,
-    .indicator-card {
-        animation: fadeInUp 0.8s ease-out forwards;
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    .vision-card:nth-child(1) { animation-delay: 0.1s; }
-    .vision-card:nth-child(2) { animation-delay: 0.2s; }
-    .vision-card:nth-child(3) { animation-delay: 0.3s; }
-
-    .governance-item:nth-child(1) { animation-delay: 0.1s; }
-    .governance-item:nth-child(2) { animation-delay: 0.2s; }
-    .governance-item:nth-child(3) { animation-delay: 0.3s; }
+.process-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c53c3c;
+    font-size: 20px;
+    flex-shrink: 0;
 }
 
-/* Responsive pour direction */
+/* ==========================================
+   RESPONSIVE POUR LAYOUT HORIZONTAL
+   ========================================== */
+
 @media (max-width: 1024px) {
-    .org-chart {
+    .governance-row.bottom-level {
+        justify-content: center;
         gap: 24px;
     }
 
-    .org-level {
-        gap: 16px;
+    .governance-card {
+        min-width: 200px;
+        max-width: 250px;
     }
 
-    .org-box {
-        min-width: 160px;
-        padding: 16px 20px;
+    .process-flow {
+        gap: 20px;
     }
 
-    .governance-timeline {
-        padding-left: 32px;
+    .process-step {
+        min-width: 140px;
+        max-width: 180px;
+        padding: 20px 16px;
     }
 }
 
 @media (max-width: 768px) {
-    .governance-timeline {
-        padding-left: 0;
+    .governance-horizontal {
+        gap: 24px;
     }
 
-    .governance-timeline::before {
-        display: none;
-    }
-
-    .governance-item::before {
-        display: none;
-    }
-
-    .governance-item {
-        margin-bottom: 24px;
-    }
-
-    .org-level {
+    .governance-row {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
-    .org-box {
+    .governance-row.bottom-level {
+        flex-direction: column;
+    }
+
+    .governance-card {
+        min-width: 280px;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .connection-arrow {
+        font-size: 20px;
+        margin: 4px 0;
+    }
+
+    .process-flow {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+        font-size: 16px;
+    }
+
+    .process-step {
+        width: 100%;
+        max-width: 280px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .governance-card {
+        min-width: auto;
+        max-width: none;
+        padding: 24px 20px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card-header i {
+        font-size: 24px;
+    }
+
+    .process-step {
+        padding: 20px 16px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .process-title {
+        font-size: 24px;
+    }
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #c53c3c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 auto 16px;
+}
+
+.process-step h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.process-step p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   STATISTIQUES - Réutilise les styles existants
+   ========================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.stat-card {
+    background: white;
+    padding: 40px 32px;
+    text-align: center;
+    border: 2px solid #e5e7eb;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: #c53c3c;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(197, 60, 60, 0.1);
+}
+
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(197, 60, 60, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c53c3c;
+    font-size: 32px;
+    margin: 0 auto 24px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    background: #c53c3c;
+    color: white;
+    transform: scale(1.1);
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #c53c3c;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #6b7280;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ==========================================
+   RAPPORTS - Style simple et cohérent
+   ========================================== */
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.report-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 0;
+    padding: 32px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.report-card:hover {
+    border-color: #c53c3c;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(197, 60, 60, 0.1);
+}
+
+.report-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(197, 60, 60, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c53c3c;
+    font-size: 24px;
+}
+
+.report-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.report-content p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.report-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.report-meta span {
+    background: #f8f9fa;
+    color: #6b7280;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.report-btn {
+    background: transparent;
+    border: 2px solid #e5e7eb;
+    color: #2c3e50;
+    padding: 12px 24px;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.report-btn:hover {
+    border-color: #c53c3c;
+    background: #c53c3c;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .director-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .director-message {
+        padding-left: 0;
+        border-left: none;
+        border-top: 4px solid #c53c3c;
+        padding-top: 40px;
+    }
+
+    .governance-row.bottom-level {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .governance-card {
         min-width: 200px;
+        max-width: 250px;
+    }
+
+    .process-flow {
+        gap: 20px;
+    }
+
+    .process-step {
+        min-width: 140px;
+        max-width: 180px;
+        padding: 20px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .director-profile {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+    .director-quote {
+        font-size: 18px;
+        padding: 24px;
+    }
+
+    .governance-horizontal {
+        gap: 24px;
+    }
+
+    .governance-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .governance-row.bottom-level {
+        flex-direction: column;
+    }
+
+    .governance-card {
+        min-width: 280px;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .connection-arrow {
+        font-size: 20px;
+        margin: 4px 0;
+    }
+
+    .process-flow {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+        font-size: 16px;
+    }
+
+    .process-step {
+        width: 100%;
+        max-width: 280px;
+        min-width: auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .stat-card {
+        padding: 32px 24px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
     }
 
     .reports-grid {
         grid-template-columns: 1fr;
     }
-
-    .performance-indicators {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-
-    .report-stats {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
 }
 
-@media (max-width: 640px) {
-    .performance-indicators {
-        grid-template-columns: 1fr;
+@media (max-width: 480px) {
+    .director-content {
+        gap: 32px;
     }
 
-    .indicator-value {
+    .profile-info {
+        padding: 24px;
+    }
+
+    .director-quote {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .director-quote::before {
+        font-size: 3rem;
+        top: 12px;
+        left: 12px;
+    }
+
+    .governance-card {
+        min-width: auto;
+        max-width: none;
+        padding: 24px 20px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card-header i {
         font-size: 24px;
     }
 
-    .indicator-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 20px;
+    .process-step {
+        padding: 20px 16px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .process-title {
+        font-size: 24px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-/* États de focus pour accessibilité */
-.vision-card:focus-within,
-.governance-item:focus-within,
-.report-card:focus-within,
-.indicator-card:focus-within {
+/* ==========================================
+   ANIMATIONS SUBTILES
+   ========================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Application des animations au scroll */
+.director-profile,
+.director-message,
+.governance-card,
+.process-step,
+.stat-card,
+.report-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Délais d'animation pour effet de cascade */
+.governance-card:nth-child(1) { animation-delay: 0.1s; }
+.governance-card:nth-child(2) { animation-delay: 0.2s; }
+.governance-card:nth-child(3) { animation-delay: 0.3s; }
+
+.process-step:nth-child(1) { animation-delay: 0.1s; }
+.process-step:nth-child(2) { animation-delay: 0.2s; }
+.process-step:nth-child(3) { animation-delay: 0.3s; }
+.process-step:nth-child(4) { animation-delay: 0.4s; }
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ==========================================
+   ÉTATS DE FOCUS POUR ACCESSIBILITÉ
+   ========================================== */
+
+.governance-card:focus,
+.process-step:focus,
+.stat-card:focus,
+.report-card:focus,
+.report-btn:focus {
     outline: 3px solid #c53c3c;
     outline-offset: 2px;
 }
 
-/* Effet de brillance sur les cartes premium */
-.vision-card.featured::after {
-    background: linear-gradient(45deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        transparent 50%);
+/* ==========================================
+   AMÉLIORATIONS VISUELLES SUBTILES
+   ========================================== */
+
+/* Séparateur visuel entre sections */
+.section-padding + .section-padding::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c53c3c, transparent);
+    margin: 0 auto;
+    position: relative;
+    top: -60px;
 }
 
-/* Amélioration de la lisibilité */
+/* Amélioration de la citation */
 .director-quote {
-    font-style: italic;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #2c3e50;
-    border-left: 4px solid #c53c3c;
-    padding-left: 24px;
-    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.director-signature {
-    text-align: right;
-    margin-top: 16px;
-    font-weight: 600;
-    color: #c53c3c;
+.director-quote::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(197, 60, 60, 0.02) 100%);
+    pointer-events: none;
+}
+
+/* Effet de survol sur les cartes de gouvernance */
+.governance-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(197, 60, 60, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.governance-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.governance-card:hover::before {
+    left: 100%;
+}
+
+/* Animation de pulsation pour les statistiques */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.stat-card:hover .stat-icon {
+    animation: pulse 2s infinite;
 }

@@ -799,3 +799,938 @@
         border-bottom: 2px solid var(--primary-color);
     }
 }
+
+/* ==========================================
+   AJOUTS POUR LE FORMULAIRE DE CANDIDATURE
+   À ajouter à la fin du fichier detail_poste.css existant
+   ========================================== */
+
+/* ==========================================
+   OVERLAY ET FORMULAIRE DE CANDIDATURE
+   ========================================== */
+
+.application-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.application-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.application-form-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-primary);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    max-height: 85vh;
+    overflow-y: auto;
+    transition: bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.application-form-container.active {
+    bottom: 0;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    border-radius: 20px 20px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.form-header h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    padding: var(--spacing-sm);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: var(--border-color);
+    color: var(--text-primary);
+    transform: rotate(90deg);
+}
+
+/* ==========================================
+   FORMULAIRE DE CANDIDATURE
+   ========================================== */
+
+.application-form {
+    padding: var(--spacing-xl);
+}
+
+.form-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.form-section-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.form-label .required {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    transition: all var(--transition-normal);
+    background: var(--bg-primary);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(197, 60, 60, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+/* ==========================================
+   UPLOAD DE FICHIERS
+   ========================================== */
+
+.file-upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    background: var(--bg-secondary);
+    position: relative;
+}
+
+.file-upload-area:hover {
+    border-color: var(--primary-color);
+    background: rgba(197, 60, 60, 0.05);
+}
+
+.file-upload-area.dragover {
+    border-color: var(--primary-color);
+    background: rgba(197, 60, 60, 0.1);
+    transform: scale(1.02);
+}
+
+.upload-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.upload-text {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-sm);
+}
+
+.upload-hint {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.file-input {
+    display: none;
+}
+
+.uploaded-files {
+    margin-top: var(--spacing-lg);
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.file-icon {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.file-name {
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.file-size {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-left: var(--spacing-xs);
+}
+
+.remove-file {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+    font-size: 1.1rem;
+}
+
+.remove-file:hover {
+    background: rgba(239, 68, 68, 0.1);
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   BOUTONS DU FORMULAIRE
+   ========================================== */
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: 0;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.submit-btn:disabled {
+    background: var(--text-secondary);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.cancel-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   MODIFICATIONS DES BOUTONS EXISTANTS
+   ========================================== */
+
+.btn-apply {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+}
+
+.btn-apply:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   NOTIFICATIONS
+   ========================================== */
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #6b7280;
+    min-width: 300px;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification-success {
+    border-left-color: #10b981;
+    color: #065f46;
+}
+
+.notification-error {
+    border-left-color: #ef4444;
+    color: #991b1b;
+}
+
+.notification-warning {
+    border-left-color: #f59e0b;
+    color: #92400e;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.field-error {
+    color: #ef4444;
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-xs);
+}
+
+.form-input.error,
+.form-textarea.error,
+.form-select.error {
+    border-color: #ef4444;
+}
+
+/* ==========================================
+   RESPONSIVE POUR LE FORMULAIRE
+   ========================================== */
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .application-form {
+        padding: var(--spacing-lg);
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .file-upload-area {
+        padding: var(--spacing-lg);
+    }
+
+    .upload-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .application-form-container {
+        max-height: 90vh;
+    }
+
+    .form-header {
+        padding: var(--spacing-lg);
+    }
+
+    .form-header h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    .notification {
+        right: 10px;
+        left: 10px;
+        transform: translateY(-100%);
+        min-width: auto;
+    }
+
+    .notification.show {
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes slideUpForm {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.application-form-container.active {
+    animation: slideUpForm 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ==========================================
+   ÉTATS DE FOCUS POUR L'ACCESSIBILITÉ
+   ========================================== */
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus,
+.submit-btn:focus,
+.cancel-btn:focus,
+.close-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   FORMULAIRE DE CANDIDATURE EN POPUP - Z-INDEX CORRIGÉS
+   À remplacer dans detail_poste.css
+   ========================================== */
+
+/* Masquer la barre de candidature quand le formulaire est ouvert */
+.application-form-container:target ~ .application-footer {
+    display: none;
+}
+
+/* Overlay avec z-index élevé */
+.application-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9998; /* Très élevé pour passer au-dessus de tout */
+    backdrop-filter: blur(3px);
+}
+
+/* Formulaire popup avec z-index maximum */
+.application-form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    background: var(--bg-primary);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Maximum pour être au-dessus de tout */
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Quand le formulaire est ciblé - Animation d'apparition */
+.application-form-container:target {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Afficher l'overlay quand le formulaire est ciblé */
+.application-form-container:target + .application-overlay {
+    display: block;
+    animation: fadeInOverlay 0.3s ease-out;
+}
+
+/* Header du formulaire avec z-index pour sticky */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, #f8fafc 100%);
+    border-radius: 16px 16px 0 0;
+    position: relative;
+    z-index: 10001; /* Plus élevé que le contenu du formulaire */
+}
+
+.form-header h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.close-btn {
+    background: rgba(239, 68, 68, 0.1);
+    border: none;
+    font-size: 1.2rem;
+    color: #ef4444;
+    text-decoration: none;
+    padding: var(--spacing-sm);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    z-index: 10002; /* Au-dessus du header */
+    position: relative;
+}
+
+.close-btn:hover {
+    background: #ef4444;
+    color: white;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Contenu du formulaire avec scroll */
+.application-form {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    padding-bottom: 0;
+    max-height: calc(85vh - 80px);
+    overflow-y: auto;
+    position: relative;
+    z-index: 10000; /* Base pour le contenu */
+}
+
+/* Style de scroll personnalisé */
+.application-form::-webkit-scrollbar {
+    width: 6px;
+}
+
+.application-form::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 3px;
+}
+
+.application-form::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.application-form::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Sections du formulaire */
+.form-section {
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    z-index: 10000;
+}
+
+.form-section-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.form-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 1px;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.form-label .required {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+/* Champs de formulaire */
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-family: inherit;
+    transition: all var(--transition-normal);
+    background: var(--bg-primary);
+    position: relative;
+    z-index: 10000;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(197, 60, 60, 0.1);
+    transform: translateY(-1px);
+    z-index: 10001; /* Plus élevé lors du focus */
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.5;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+/* Upload de fichiers compact */
+.file-upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    background: var(--bg-secondary);
+    display: block;
+    position: relative;
+    z-index: 10000;
+}
+
+.file-upload-area:hover {
+    border-color: var(--primary-color);
+    background: rgba(197, 60, 60, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(197, 60, 60, 0.1);
+    z-index: 10001;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.upload-text {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+}
+
+.upload-hint {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.file-input {
+    display: none;
+}
+
+/* Actions du formulaire avec z-index pour sticky */
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    position: sticky;
+    bottom: 0;
+    background: var(--bg-primary);
+    margin-left: calc(-1 * var(--spacing-xl));
+    margin-right: calc(-1 * var(--spacing-xl));
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    z-index: 10001; /* Au-dessus du contenu pour sticky */
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(197, 60, 60, 0.3);
+    position: relative;
+    z-index: 10001;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(197, 60, 60, 0.4);
+    z-index: 10002;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10001;
+}
+
+.cancel-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    z-index: 10002;
+}
+
+/* Animations */
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popupAppear {
+    0% {
+        transform: translate(-50%, -50%) scale(0.7);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.application-form-container:target {
+    animation: popupAppear 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .application-form-container {
+        width: 95%;
+        max-width: none;
+        max-height: 90vh;
+        z-index: 9999; /* Maintenir le z-index élevé */
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .application-form {
+        padding: var(--spacing-md);
+    }
+
+    .form-header {
+        padding: var(--spacing-md);
+    }
+
+    .form-actions {
+        flex-direction: column;
+        margin-left: calc(-1 * var(--spacing-md));
+        margin-right: calc(-1 * var(--spacing-md));
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+
+    .file-upload-area {
+        padding: var(--spacing-md);
+    }
+
+    .upload-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .application-form-container {
+        width: 98%;
+        max-height: 95vh;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999; /* Maintenir le z-index élevé */
+    }
+
+    .form-header h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .close-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    /* S'assurer que l'overlay reste au-dessus sur mobile */
+    .application-overlay {
+        z-index: 9998;
+    }
+}
+
+/* Effet de focus amélioré */
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(197, 60, 60, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Amélioration visuelle des sections */
+.form-section {
+    background: rgba(248, 250, 252, 0.5);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.form-section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Protection contre les conflits de z-index avec d'autres éléments */
+.application-form-container,
+.application-overlay {
+    isolation: isolate; /* Crée un nouveau contexte de stacking */
+}
+
+/* Pour forcer le popup au-dessus de tout, même des éléments avec position fixed */
+.application-form-container:target {
+    z-index: 2147483647; /* Valeur maximum pour z-index */
+}
+
+.application-form-container:target + .application-overlay {
+    z-index: 2147483646; /* Juste en dessous du popup */
+}

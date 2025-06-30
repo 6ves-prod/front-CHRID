@@ -275,5 +275,66 @@ function initializeMobileNavigation() {
         console.log('Navigation mobile réinitialisée');
     };
 
+    /**
+ * NAVBAR AUTO-HIDE SIMPLE - À ajouter à common.js
+ */
+
+let lastScrollY = 0;
+let ticking = false;
+
+function updateNavbar() {
+    const header = document.querySelector('.header');
+    const currentScrollY = window.scrollY;
+
+    if (!header) return;
+
+    if (currentScrollY < 50) {
+        // En haut de page - toujours visible
+        header.style.transform = 'translateY(0)';
+    } else if (currentScrollY > lastScrollY) {
+        // Scroll vers le bas - masquer
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        // Scroll vers le haut - afficher
+        header.style.transform = 'translateY(0)';
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+function onScroll() {
+    if (!ticking) {
+        requestAnimationFrame(updateNavbar);
+        ticking = true;
+    }
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+
+    if (header) {
+        // Ajouter les styles nécessaires
+        header.style.position = 'fixed';
+        header.style.top = '0';
+        header.style.left = '0';
+        header.style.right = '0';
+        header.style.zIndex = '1000';
+        header.style.transition = 'transform 0.3s ease';
+        header.style.backgroundColor = 'white';
+        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+
+        // Écouteur de scroll
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        // Ajouter un espaceur pour compenser la navbar fixe
+        const spacer = document.createElement('div');
+        spacer.style.height = header.offsetHeight + 'px';
+        spacer.className = 'navbar-spacer';
+        header.parentNode.insertBefore(spacer, header.nextSibling);
+    }
+});
+
     console.log('Navigation mobile initialisée avec succès');
 }

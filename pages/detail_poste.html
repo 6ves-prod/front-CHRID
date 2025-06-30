@@ -139,10 +139,10 @@
                 <!-- Colonne de droite - Actions -->
                 <div class="hero-actions">
                     <div class="action-buttons">
-                        <button class="btn btn-primary btn-large">
+                        <a href="#application-form" class="btn btn-primary btn-large">
                             <i class="fas fa-paper-plane"></i>
                             Postuler maintenant
-                        </button>
+                        </a>
                         <button class="btn btn-secondary">
                             <i class="fas fa-share-alt"></i>
                             Partager
@@ -361,14 +361,139 @@
                     <p>CRIHD - Abidjan, Côte d'Ivoire</p>
                 </div>
                 <div class="footer-actions">
-                    <button class="btn btn-primary btn-large">
+                    <a href="#application-form" class="btn btn-primary btn-large">
                         <i class="fas fa-paper-plane"></i>
                         Postuler maintenant
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- AJOUTS À PLACER JUSTE AVANT </body> -->
+
+    <!-- Formulaire de candidature (caché par défaut) -->
+    <div class="application-form-container" id="application-form">
+        <div class="form-header">
+            <h3>Postuler pour ce poste</h3>
+            <a href="#" class="close-btn">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+
+        <form class="application-form" method="post" action="/submit-application" enctype="multipart/form-data">
+            <!-- Informations personnelles -->
+            <div class="form-section">
+                <h4 class="form-section-title">Informations personnelles</h4>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Prénom <span class="required">*</span></label>
+                        <input type="text" class="form-input" name="firstName" required placeholder="Votre prénom">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Nom <span class="required">*</span></label>
+                        <input type="text" class="form-input" name="lastName" required placeholder="Votre nom">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Email <span class="required">*</span></label>
+                        <input type="email" class="form-input" name="email" required placeholder="votre.email@exemple.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Téléphone <span class="required">*</span></label>
+                        <input type="tel" class="form-input" name="phone" required placeholder="+225 XX XX XX XX">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Années d'expérience pertinente <span class="required">*</span></label>
+                    <select class="form-select" name="experience" required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="0-2">0-2 ans</option>
+                        <option value="3-5">3-5 ans</option>
+                        <option value="5-10">5-10 ans</option>
+                        <option value="10+">Plus de 10 ans</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Documents requis -->
+            <div class="form-section">
+                <h4 class="form-section-title">Documents requis</h4>
+
+                <div class="form-group">
+                    <label class="form-label">CV <span class="required">*</span></label>
+                    <label for="cv-file" class="file-upload-area">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="upload-text">
+                            Cliquez pour choisir votre CV
+                        </div>
+                        <div class="upload-hint">
+                            Formats acceptés: PDF, DOC, DOCX (Max 5MB)
+                        </div>
+                    </label>
+                    <input type="file" id="cv-file" name="cv" class="file-input" accept=".pdf,.doc,.docx" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Lettre de motivation (optionnel)</label>
+                    <label for="cover-letter-file" class="file-upload-area">
+                        <div class="upload-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="upload-text">
+                            Choisir votre lettre de motivation
+                        </div>
+                        <div class="upload-hint">
+                            Formats acceptés: PDF, DOC, DOCX (Max 5MB)
+                        </div>
+                    </label>
+                    <input type="file" id="cover-letter-file" name="coverLetter" class="file-input" accept=".pdf,.doc,.docx">
+                </div>
+            </div>
+
+            <!-- Message personnel -->
+            <div class="form-section">
+                <h4 class="form-section-title">Message personnel</h4>
+
+                <div class="form-group">
+                    <label class="form-label">Présentez-vous et expliquez votre motivation <span class="required">*</span></label>
+                    <textarea class="form-textarea" name="message" required placeholder="Parlez-nous de votre motivation pour ce poste, de vos projets récents et pourquoi vous seriez le candidat idéal pour CRIHD..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Comment avez-vous entendu parler de ce poste ?</label>
+                    <select class="form-select" name="source">
+                        <option value="">Sélectionnez...</option>
+                        <option value="site-web">Site web CRIHD</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="recommendation">Recommandation</option>
+                        <option value="emploi-site">Site d'emploi</option>
+                        <option value="autres">Autres</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Actions du formulaire -->
+            <div class="form-actions">
+                <a href="#" class="cancel-btn">
+                    Annuler
+                </a>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Envoyer ma candidature
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Overlay (caché par défaut) -->
+    <div class="application-overlay"></div>
 
     <!-- Footer principal -->
     <footer class="footer">
