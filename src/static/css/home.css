@@ -265,18 +265,6 @@
   background-position: center;
 }
 
-.service-image.research {
-  background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop');
-}
-
-.service-image.consulting {
-  background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop');
-}
-
-.service-image.analysis {
-  background-image: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=400&h=250&fit=crop');
-}
-
 .service-content {
   height: 30%;
   padding: 25px var(--spacing-lg);
@@ -315,9 +303,8 @@
 
 /* États hover optimisés */
 .service-card:hover .service-image {
-  height: 100%;
-  position: absolute;
-  inset: 0;
+  top: 50px;
+  transform: scale(1.5);
 }
 
 .service-card:hover .service-content {
@@ -421,13 +408,16 @@
 }
 
 .partner-logo {
+  width: 100%;
+  height: 100px;
   background: var(--bg-primary);
-  padding: var(--spacing-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 80px;
   border: 1px solid #e5e7eb;
+  overflow: hidden;
+  object-fit: contain
 }
 
 /* ==========================================
